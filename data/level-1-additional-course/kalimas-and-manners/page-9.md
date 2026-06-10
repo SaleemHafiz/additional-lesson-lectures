@@ -2,88 +2,57 @@
 
 ## Meaning of a Prophet (Nabi)
 
-* A Prophet (Nabi) is a human chosen by Allah to receive divine guidance and convey it to people.
-* Prophets are protected from major sins in delivering Allah’s message so that guidance remains pure.
-* A Prophet follows the teachings of previous revelation or confirms existing guidance from Allah.
-* Prophets call people to worship Allah alone and live according to His commands.
-* Prophethood is a divine selection, not something earned by human effort.
+* A Prophet (Nabi) is chosen by Allah to receive and deliver divine guidance to people.
+* He calls humanity to worship Allah alone and follow His commands, and is protected in conveying revelation.
 
 ## Meaning of a Messenger (Rasool)
 
-* A Messenger (Rasool) is a Prophet who is given a new divine law or scripture.
-* Messengers are sent with a specific message to guide their people in a clearer or renewed form.
-* Examples include Musa (Moses) with the Torah and Isa (Jesus) with the Gospel.
+* A Messenger (Rasool) is a Prophet given a new scripture or law for his people.
 * Every Messenger is a Prophet, but not every Prophet is a Messenger.
-* Messengers are sent when communities need renewed guidance or correction.
 
 ## Difference Between Nabi and Rasool
 
-* A Nabi continues or confirms existing revelation, while a Rasool brings a new revealed law.
-* A Rasool is generally sent with a book or scripture, while a Nabi may not bring a new book.
-* Both Nabi and Rasool are chosen by Allah and convey divine truth.
-* Both are obligated to call people to Tawheed and obedience to Allah.
-* The difference is in function, not in rank of obedience to Allah.
+* A Nabi continues existing revelation, while a Rasool brings a new law or scripture.
+* Both are chosen by Allah and call to Tawheed, differing only in function, not obedience.
 
 ## Concept of Final Prophethood
 
-* Islam teaches that prophethood ended with Hazrat Muhammad ﷺ.
-* He is called Khatam an-Nabiyyin, meaning the Seal of the Prophets, as stated in the Quran (33:40).
-* No new Prophet or Messenger will come after him.
-* His message is universal and meant for all humanity until the Day of Judgment.
-* His teachings complete and preserve the final divine guidance.
+* Prophethood ended with Hazrat Muhammad ﷺ, who is the Seal of the Prophets (33:40).
+* No Prophet or Messenger will come after him, and his message is universal and final.
 
-## Quranic Evidence of Finality
+## Qur’anic Evidence of Finality
 
-* The Quran explicitly identifies Muhammad ﷺ as the Seal of the Prophets in Surah Al-Ahzab 33:40.
-* The Quran declares Islam as a completed religion in Surah Al-Ma’idah 5:3.
-* Allah confirms that the Prophet ﷺ was sent to all mankind in Surah Saba 34:28.
-* The Quran emphasizes preservation of its message as final guidance.
-* These verses collectively confirm the end of prophethood after Muhammad ﷺ.
+* The Qur’an calls Muhammad ﷺ the Seal of the Prophets (33:40).
+* It also declares Islam completed as a religion (5:3) and sent for all humanity (34:28).
 
 ## Hadith Evidence of Final Prophethood
 
-* The Prophet ﷺ said there is no prophet after him, as recorded in Sahih al-Bukhari and Sahih Muslim.
-* He compared his role to the final brick completing a perfect building.
-* This analogy shows that prophethood was completed and perfected through him.
-* The companions unanimously understood and believed in this finality.
-* Classical Islamic scholars have consistently upheld this belief.
+* The Prophet ﷺ clearly said there is no prophet after him (Bukhari, Muslim).
+* He compared prophethood to a completed building, showing final completion.
 
 ## Role of Previous Prophets
 
-* Allah sent many prophets before Muhammad ﷺ to guide different nations.
-* Each prophet called people to worship Allah alone and avoid shirk.
-* Some prophets were given scriptures suited to their time and community.
-* Over time, some earlier messages were altered or partially lost.
-* Muhammad ﷺ’s message confirms, corrects, and completes all previous revelations.
+* Earlier prophets were sent to guide specific nations to worship Allah alone.
+* Their teachings were confirmed and completed by Muhammad ﷺ.
 
 ## Significance of Final Prophethood
 
-* Belief in final prophethood ensures unity in religious guidance for all Muslims.
-* It protects Islam from claims of new prophets or altered revelation.
-* It makes the Quran and Sunnah the final and permanent sources of guidance.
-* It strengthens faith in the completeness and perfection of Islam.
-* It establishes clarity in belief until the end of time.
+* It ensures unity and stability in religious guidance for all Muslims.
+* It makes the Qur’an and Sunnah the final, preserved source of Islam.
 
 ## Common Misunderstandings
 
-* Some falsely believe prophethood can continue after Muhammad ﷺ, which contradicts Quran and Sunnah.
-* Some confuse spiritual inspiration with prophethood, which is incorrect in Islamic theology.
-* Some misunderstand sainthood (wali) as prophethood, but they are different concepts.
-* Some ignore clear textual evidence due to weak interpretations.
-* Correct belief requires adherence to Quran, authentic Hadith, and consensus of scholars.
+* Some wrongly believe prophethood continues after Muhammad ﷺ, which contradicts Islam.
+* Spiritual status or sainthood is not prophethood and must not be confused with it.
 
 ## Practical Understanding for Muslims
 
-* Muslims should rely only on the Quran and authentic Sunnah for guidance.
-* Muslims should reject any claim of new prophethood after Muhammad ﷺ.
-* Muslims should preserve and follow the teachings of Islam without alteration.
-* Muslims should seek knowledge from qualified scholars based on authentic sources.
-* Muslims should strengthen faith in the completeness of Islamic guidance.
+* Muslims must follow only the Qur’an and authentic Sunnah.
+* Any claim of new prophethood after Muhammad ﷺ must be rejected.
 
 ## Key Takeaways
 
-* A Prophet receives divine guidance, while a Messenger brings a new or renewed law.
-* Hazrat Muhammad ﷺ is both Prophet and Messenger and the final one.
-* Prophethood ended with him, as confirmed by Quran and authentic Hadith.
-* Islam is a complete and preserved religion for all humanity.
-* Belief in his finality is essential for correct Islamic faith.
+* A Prophet receives guidance, while a Messenger brings a law.
+* Muhammad ﷺ is the final Prophet and Messenger.
+* Prophethood ended with him, completing Islam for all humanity.
+* Belief in his finality is essential in Islam.

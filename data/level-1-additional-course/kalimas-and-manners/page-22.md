@@ -1,70 +1,87 @@
-# Prophets of Allah in Islam
+# Important Prophets in Islam: Their Role, Message, and Lessons
 
 ## Introduction
 
-* Prophets are chosen servants of Allah who were sent to guide humanity toward worship of Allah alone and righteous living.
-* The belief in all prophets is an essential part of Islamic faith (Iman).
+* Belief in all prophets is part of faith.
+* All prophets called to worship Allah alone.
 
-## Who is a Prophet
+## Prophethood Concept
 
-* A Prophet (Nabi) is a human chosen by Allah to receive revelation and guide people.
-* A Prophet teaches people how to live according to Allah’s commands.
-* Prophets are not divine and do not share Allah’s authority.
+* Nabi receives guidance, Rasool brings scripture.
+* All end with Prophet Muhammad ﷺ.
 
-## Purpose of Prophets
+## Adam (AS)
 
-* Allah sent Prophets to guide mankind toward truth and worship of One God.
-* Prophets taught people to speak truth, avoid injustice, and live with good character.
-* Prophets reminded people about accountability in the Hereafter.
+* First human and prophet.
+* Teaches repentance.
 
-## First and Last Prophet
+## Nuh (AS)
 
-* The first Prophet was Hazrat Adam (peace be upon him).
-* The last Prophet is Hazrat Muhammad ﷺ.
-* After Prophet Muhammad ﷺ, no new Prophet will come, as prophethood has ended.
+* Called people to Tawheed for long years.
+* Teaches patience.
 
-## Some Important Prophets
+## Ibrahim (AS)
 
-* Hazrat Adam (peace be upon him) was the first human and first Prophet.
-* Hazrat Nuh (peace be upon him) called people to worship Allah for a long time.
-* Hazrat Ibrahim (peace be upon him) is known for strong faith and submission to Allah.
-* Hazrat Musa (peace be upon him) was given the Torah and led بني Israel.
-* Hazrat Isa (peace be upon him) was given the Injil and performed miracles by Allah’s permission.
-* Hazrat Yusuf, Hazrat Yunus, Hazrat Ayyub, Hazrat Dawud, Hazrat Sulayman, Hazrat Shuayb, Hazrat Zakariyya, Hazrat Hud, and Hazrat Ismaeel (peace be upon them all) were also among the noble Prophets.
-* Hazrat Muhammad ﷺ is the final and most complete messenger of Allah.
+* Broke idols and passed trials.
+* Model of submission.
 
-## Status and Qualities of Prophets
+## Ismail (AS)
 
-* Prophets are the best and most honorable among human beings chosen by Allah.
-* They are truthful, trustworthy, and protected by Allah in conveying His message.
-* They are free from major sins and always guided in delivering revelation correctly.
+* Showed obedience and patience.
+* Helped build Kaaba.
 
-## Teachings of the Prophets
+## Musa (AS)
 
-* All Prophets taught belief in One Allah (Tawheed).
-* They instructed people to avoid harming others and to live with honesty and justice.
-* They encouraged prayer, good manners, and obedience to Allah.
+* Faced Pharaoh with miracles.
+* Teaches courage.
 
-## Miracles of Prophets
+## Isa (AS)
 
-* Allah supported Prophets with miracles to prove their truthfulness.
-* Hazrat Musa (peace be upon him) had miracles like the staff turning into a serpent by Allah’s will.
-* Hazrat Isa (peace be upon him) healed the sick by Allah’s permission.
-* The Holy Qur’an is the greatest lasting miracle given to Prophet Muhammad ﷺ.
+* Born miraculously, did miracles by Allah.
+* Not divine, but Prophet.
 
-## Why We Must Believe in Prophets
+## Yusuf (AS)
 
-* Belief in Prophets is part of Islamic faith and obedience to Allah.
-* Rejecting any Prophet mentioned in Islam is a rejection of divine guidance.
-* Following Prophets leads to a correct understanding of life and worship.
+* Faced betrayal and prison.
+* Teaches patience and forgiveness.
 
-## Key Lessons
+## Ayyub (AS)
 
-* Prophets teach that true success comes from obedience to Allah.
-* Good character and truthfulness are central teachings of all Prophets.
-* The life of Prophet Muhammad ﷺ is a complete model for humanity.
+* Tested with illness.
+* Teaches endurance.
 
-## Final Reminder
+## Dawud (AS)
 
-* All Prophets were sent to guide humanity toward truth, peace, and worship of Allah alone.
-* Muslims should respect all Prophets and follow their teachings in daily life.
+* Given Zabur, strong ruler.
+* Known for justice.
+
+## Sulayman (AS)
+
+* Ruled with wisdom.
+* Given control over wind/jinn by Allah.
+
+## Salih, Hud, Shuayb (AS)
+
+* Called to Tawheed and justice.
+* Nations were punished for rejection.
+
+## Zakariyya & Yunus (AS)
+
+* Dua brings miracles; Yunus repented and was saved.
+* Teaches hope in mercy.
+
+## Muhammad ﷺ
+
+* Final Prophet and mercy to all.
+* Brought complete guidance.
+
+## Importance
+
+* All prophets must be believed.
+* All taught Tawheed.
+
+## Key Takeaways
+
+* All prophets called to one message.
+* Each gives life lessons.
+* Muhammad ﷺ is final Prophet.

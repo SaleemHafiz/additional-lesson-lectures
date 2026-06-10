@@ -1,64 +1,61 @@
-# Exercise Corner: Sunnah Manners of Talking
+# Sunnah of Talking: Islamic Manners of Communication
 
 ## Introduction
 
-* Speaking is a blessing from Allah that allows humans to communicate and build relationships.
-* Islam teaches that speech must be guided by manners so that it becomes a source of goodness.
-* The Prophet Muhammad ﷺ showed the best example of how a believer should speak in daily life.
+* Speech is a blessing from Allah.
+* It can bring reward or harm.
+* The Prophet ﷺ taught proper speaking manners.
 
-## Meaning and Importance of Talking Manners
+## Importance of Speech
 
-* The ability to talk is a gift from Allah that should be used responsibly.
-* Islam teaches that manners of speech are part of a Muslim’s character and faith.
-* The Sunnah of the Prophet ﷺ provides practical guidance for respectful and beneficial communication.
+* Islam commands good and just speech.
+* Words reflect a person’s character.
+* Good speech is part of faith.
 
-## Key Ideas from the Exercise (Matching Concepts)
+## Basic Sunnah Principles
 
-* The ability to talk is a blessing of Allah that should be used in a good way.
-* Allah wants believers to remember proper manners while speaking in daily life.
-* The Prophet Muhammad ﷺ taught people to speak good words and avoid harmful speech.
-* When someone speaks to us, we should listen calmly and avoid interrupting.
-* The Sunnah of the Prophet ﷺ includes speaking good things and using kind words.
+* Begin with “As-Salaamu Alaikum”.
+* Speak calmly and clearly.
+* Avoid arrogance in speech.
+* Use gentle and polite tone.
 
-## Sunnah Manners of Talking
+## Conversation Manners
 
-* We should begin speech with peace and use polite language in all conversations.
-* We should speak calmly and clearly without rushing our words.
-* We should listen carefully without interrupting others while they are speaking.
-* We should speak with respect to elders and kindness to younger people.
-* We should avoid shouting, anger, and harsh words during communication.
+* Do not raise the voice unnecessarily.
+* Control anger while speaking.
+* Do not interrupt others.
+* Listen carefully and respectfully.
+* Avoid excessive joking.
 
-## Respectful Communication in Islam
+## Respect in Speech
 
-* Respect in speech means valuing others and caring about their feelings.
-* Speaking respectfully to elders is part of Islamic manners and good character.
-* Speaking kindly to younger people shows mercy and good upbringing.
-* The Prophet Muhammad ﷺ was known for speaking clearly, wisely, and kindly in all situations.
+* Speak politely to elders.
+* Be kind to younger people.
+* Show mercy in all communication.
+* Respect is part of Sunnah.
 
-## Benefits of Following Sunnah Speech
+## Effects of Speech
 
-* Following Sunnah manners of talking brings love and respect from others.
-* Good speech creates peaceful relationships in families and communities.
-* Proper communication reduces misunderstandings and conflicts.
-* Allah is pleased with those who use their tongue for good and truthful speech.
+* Good speech builds love and trust.
+* Bad speech causes conflict.
+* Kind words bring Allah’s pleasure.
 
-## Answers to Study Questions
+## Practical Application
 
-* The Prophet Muhammad ﷺ was known for speaking good, wise, and beneficial words.
-* We should talk to elders with respect and politeness.
-* We should talk to younger people with kindness and care.
-* If we follow the Sunnah of talking, we gain respect from people and reward from Allah.
+* Start conversations with greetings.
+* Speak slowly and clearly.
+* Be patient while listening.
+* Avoid insults and shouting.
+* Use respectful language always.
 
 ## Key Takeaways
 
-* Speech is a trust from Allah and must be used in a good manner.
-* The Sunnah teaches calm, respectful, and kind communication.
-* Listening properly and avoiding interruption are important manners.
-* Good speech improves character and strengthens relationships.
+* Speech is a responsibility.
+* Sunnah teaches kindness and calmness.
+* Listening is part of good manners.
+* Words can bring reward or harm.
 
 ## Final Reminder
 
-* Every word we speak has value and should be chosen carefully.
-* Following the Sunnah of speech helps build a peaceful and respectful life.
-* A believer should always aim to speak in a way that pleases Allah and benefits others.
-
+* Every word is accountable.
+* Speak only what benefits you and others.

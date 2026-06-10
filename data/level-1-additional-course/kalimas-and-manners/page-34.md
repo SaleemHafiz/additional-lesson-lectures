@@ -1,72 +1,51 @@
-# Cleanliness and Manners in Daily Life (Brushing, Hygiene, Eating and Drinking)
+# Morals and Manners in Islam
 
 ## Introduction
 
-* Islam connects daily habits with faith by turning ordinary actions into acts of worship when done correctly.
-* Cleanliness is a major value in Islam because it affects both physical health and spiritual discipline.
-* The Prophet Muhammad ﷺ taught practical daily routines that help a believer stay clean and disciplined.
+* Islam strongly emphasizes good morals and manners in daily life.
+* Good manners are part of faith and reflect a believer’s character.
 
-## Importance of Oral Cleanliness
+## Respect for Others in Islam
 
-* Islam encourages keeping the mouth clean as part of personal hygiene and good manners.
-* The Prophet Muhammad ﷺ strongly encouraged the use of miswak for cleaning the teeth, as mentioned in authentic Hadith literature.
-* Using a toothbrush and toothpaste is also permissible as they achieve the same purpose of cleanliness.
-* Oral hygiene helps maintain health and prevents harm to oneself and others during speech and interaction.
+* Islam teaches respect for parents, teachers, neighbors, Muslims, and non-Muslims.
+* Respect means kindness, fairness, and dignity toward all people.
 
-## General Cleanliness in Islam
+## Moral Responsibility in Daily Life
 
-* Cleanliness is part of a Muslim’s identity and reflects discipline in daily life.
-* Rinsing the mouth after eating helps maintain hygiene and prevents discomfort.
-* Keeping nails trimmed is important because long nails can collect dirt and cause harm.
-* Regular bathing helps maintain physical cleanliness and personal freshness.
-* Combing hair and keeping it neat is encouraged to avoid untidiness and maintain a presentable appearance.
-* Wearing clean and proper clothing is part of respecting oneself and others in social life.
+* Muslims must show good manners in all daily interactions.
+* The Prophet ﷺ was sent to perfect good character and behavior.
 
-## Importance of Clean Living
+## Importance of Islamic Teachings in Manners
 
-* Clean habits protect health and reduce the spread of illness.
-* Cleanliness also improves confidence and social interaction.
-* Islam encourages both outer cleanliness and inner purity of intention and behavior.
-* Maintaining cleanliness is part of showing gratitude for Allah’s blessings.
+* Islam provides clear guidance for behavior in every situation.
+* Following it builds patience, honesty, kindness, and strong relationships.
 
-## Eating and Drinking in Islam
+## Manners Related to Cleanliness
 
-* Food and drink are blessings from Allah provided for human survival and growth.
-* Islam divides food into halal (permissible) and haram (forbidden) based on divine guidance.
-* Halal food is far more in variety and is sufficient for a healthy and balanced life.
-* Eating halal food is an act of obedience to Allah and brings reward when done with the right intention.
+* Cleanliness is part of faith and a sign of discipline.
+* Islam links physical cleanliness with respect and moral character.
 
-## Sunnah Etiquettes of Eating
+## Cleanliness and Faith
 
-* One should eat only when truly hungry to avoid waste and overconsumption.
-* Hands should be washed before eating to maintain cleanliness and hygiene.
-* Following the Sunnah while eating increases reward and brings blessings to daily life.
-* Proper manners during eating reflect respect for Allah’s provision.
+* Cleanliness protects health and improves society.
+* Islam teaches both outer cleanliness and inner purity of heart.
 
-## Wisdom Behind Cleanliness and Eating Manners
+## Benefits of Good Manners
 
-* Clean habits protect both body and community from harm.
-* Following Sunnah practices builds discipline and self-control.
-* Eating with manners prevents waste and encourages gratitude.
-* Cleanliness and proper eating behavior strengthen a believer’s character.
+* Good manners create respect, trust, and harmony.
+* They strengthen families and communities and earn Allah’s reward.
 
-## Common Mistakes
+## Common Mistakes in Manners
 
-* Neglecting oral hygiene can lead to health problems and unpleasant interaction with others.
-* Ignoring cleanliness in appearance reduces respect in social settings.
-* Eating without cleanliness or manners reduces discipline and gratitude.
-* Overeating without hunger goes against the balanced lifestyle encouraged in Islam.
+* Ignoring respect for others weakens relationships.
+* Bad manners and poor cleanliness harm society and go against Islam.
 
 ## Key Takeaways
 
-* Cleanliness is an essential part of Islamic life and daily worship.
-* The Prophet ﷺ taught simple but powerful habits for hygiene and behavior.
-* Eating halal food with proper manners is a form of obedience to Allah.
-* Clean living improves health, character, and spiritual growth.
+* Islam teaches respect and good manners for everyone.
+* Cleanliness and good character are essential parts of faith.
 
 ## Final Reminder
 
-* A Muslim should treat cleanliness as a daily responsibility, not an occasional habit.
-* Following the Sunnah in hygiene and eating brings both health benefits and spiritual reward.
-* Small daily actions, when done correctly, become a path to Allah’s pleasure.
-
+* A Muslim should practice good manners in daily life.
+* True success comes from living with respect, cleanliness, and good character.

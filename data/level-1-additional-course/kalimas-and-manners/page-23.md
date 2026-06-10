@@ -1,59 +1,57 @@
-# Our Beloved Prophet Muhammad ﷺ
+# Prophets of Allah in Islam
 
 ## Introduction
 
-* The Prophet Muhammad ﷺ is the final Messenger of Allah and the most honored human being in Islam.
-* Muslims believe that loving, respecting, and following him is part of faith.
+* Prophets are chosen by Allah to guide humanity.
+* Belief in all prophets is part of Iman.
 
-## Identity of the Prophet
+## Who is a Prophet
 
-* The name of our beloved Prophet is Hazrat Muhammad ﷺ.
-* He is the last Prophet sent by Allah for the guidance of all humanity.
-* He is also known as the Messenger of Allah (Rasoolullah).
+* A Prophet is a human chosen to receive revelation.
+* Prophets are not divine and have no share in Allah’s authority.
 
-## Birth of the Prophet
+## Purpose of Prophets
 
-* The Holy Prophet ﷺ was born in Makkah, a sacred city in Arabia.
-* He was born on 12th Rabi-ul-Awwal according to widely accepted Islamic tradition.
-* His birth marked the beginning of a new era of guidance for humanity.
+* They call to Tawheed and righteous life.
+* They warn about accountability in the Hereafter.
 
-## Blessed Family Lineage
+## First and Last Prophet
 
-* The father of the Prophet ﷺ was Hazrat Abdullah.
-* The mother of the Prophet ﷺ was Hazrat Aamina.
-* The grandfather of the Prophet ﷺ was Hazrat Abdul Muttalib.
-* He belonged to a noble and respected family of the Quraysh tribe.
+* First Prophet: Adam (AS), last Prophet: Muhammad ﷺ.
+* No prophet will come after Muhammad ﷺ.
 
-## Why the Prophet ﷺ is the Greatest Human Being
+## Important Prophets
 
-* He was chosen by Allah as the final and complete guide for humanity.
-* He taught the purest form of worship: belief in One Allah without partners.
-* He showed the best example of kindness, honesty, patience, and mercy.
-* Allah described him in the Qur’an as a mercy for all worlds (Surah Al-Anbiya 21:107).
+* Adam, Nuh, Ibrahim, Musa, Isa (AS) are major prophets.
+* Others include Yusuf, Yunus, Ayyub, Dawud, Sulayman, Shuayb, Zakariyya, Hud, Ismail (AS).
+* Muhammad ﷺ is the final and complete Messenger.
 
-## Message of the Prophet ﷺ
+## Status of Prophets
 
-* He called people to worship Allah alone and avoid all forms of shirk.
-* He taught truthfulness, justice, and good manners in every aspect of life.
-* He guided people to live peacefully with family, neighbors, and society.
+* Prophets are the best and most honored humans.
+* They are truthful and protected in delivering message.
 
-## Importance of Learning About the Prophet ﷺ
+## Teachings of Prophets
 
-* Learning about the Prophet ﷺ strengthens love and connection with him.
-* Understanding his life helps Muslims follow Islam correctly.
-* His biography (Seerah) is the best example for moral and spiritual life.
+* All taught worship of One Allah.
+* They promoted honesty, justice, and good character.
 
-## Activity and Learning
+## Miracles of Prophets
 
-* Students are encouraged to learn and recite a Naat (Nasheed) in praise of the Prophet ﷺ.
-* Learning and sharing poetry about the Prophet ﷺ helps develop love for him.
-* Teachers and parents should guide children in understanding his noble life.
+* Prophets were supported with miracles by Allah.
+* Quran is the greatest lasting miracle of Muhammad ﷺ.
 
-## Reflection Question
+## Importance of Belief
 
-* The greatest human being is Hazrat Muhammad ﷺ because Allah chose him as the final Messenger and perfect example for humanity.
+* Belief in prophets is essential part of faith.
+* Rejecting any prophet means rejecting guidance.
+
+## Key Lessons
+
+* Success is in obedience to Allah.
+* All prophets taught truth and good character.
 
 ## Final Reminder
 
-* The Prophet Muhammad ﷺ is the greatest blessing for mankind and the best role model for all people until the end of time.
-
+* Prophets guide humanity to worship Allah alone.
+* Muslims must respect and follow all prophets.
