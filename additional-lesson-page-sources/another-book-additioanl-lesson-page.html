@@ -1,0 +1,2883 @@
+<!DOCTYPE html>
+<!-- Header Area -->
+<html lang="en">
+<!--begin::Head-->
+
+<head>
+    <base href="./" />
+    <!-- Primary Meta -->
+    <title>LMS | Learn Quran Academy</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description"
+        content="Learn Quran Academy - Online Quran Learning Management System for students, teachers and management." />
+    <meta name="keywords"
+        content="Learn Quran, Quran Academy, LMS, Online Quran Classes, Islamic Learning, Quran Teacher" />
+    <meta name="author" content="Learn Quran Academy" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0b5d3b" />
+    <!-- Open Graph -->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="LMS | Learn Quran Academy" />
+    <meta property="og:description" content="Online Quran Learning Management System." />
+    <meta property="og:site_name" content="Learn Quran Academy" />
+    <meta property="og:image" content="../../uploads/material/favicon.png" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="LMS | Learn Quran Academy" />
+    <meta name="twitter:description" content="Online Quran Learning Management System." />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../../uploads/material/favicon.png" />
+    <link rel="apple-touch-icon" href="../../uploads/material/favicon.png" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" rel="stylesheet" />
+    <!-- Vendor Styles -->
+    <link href="../assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+    <!-- Global Styles -->
+    <link href="../assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <!-- Security -->
+    <script>
+        // Prevent Clickjacking
+        if (window.top != window.self) {
+            window.top.location.replace(window.self.location.href);
+        }
+    </script>
+</head>
+<style>
+    .lesson-viewer-box {
+        min-height: 58vh;
+        background: #f6f8fb;
+        border: 1px solid #e8eaf0;
+        border-radius: 14px;
+        padding: 18px;
+    }
+
+    .lesson-image-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        cursor: zoom-in;
+    }
+
+    .lesson-image-link img {
+        max-height: 60vh;
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: 0 10px 30px rgba(20, 24, 40, .12);
+        transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .lesson-image-link:hover img {
+        transform: translateY(-2px);
+        box-shadow: 0 16px 40px rgba(20, 24, 40, .16);
+    }
+
+    .pswp__bg {
+        background: #050505;
+    }
+
+    .pswp__img {
+        border-radius: 6px;
+    }
+
+    @media (max-width: 768px) {
+        .lesson-viewer-box {
+            min-height: 45vh;
+            padding: 10px;
+        }
+
+        .lesson-image-link img {
+            max-height: 52vh;
+        }
+    }
+</style>
+<!--begin::Wrapper-->
+<!--begin::Wrapper-->
+<div class="app-wrapper flex-column flex-row-fluid" id="kt_app_wrapper">
+    <!--begin::Main-->
+    <div class="app-main flex-column flex-row-fluid" id="kt_app_main">
+        <!--begin::Content wrapper-->
+        <div class="d-flex flex-column flex-column-fluid">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.css">
+            <!--begin::Toolbar-->
+            <div id="kt_app_toolbar" class="app-toolbar py-2">
+                <div id="kt_app_toolbar_container"
+                    class="app-container container-fluid d-flex justify-content-between align-items-center flex-wrap gap-3 mt-3">
+                    <!-- LEFT -->
+                    <div class="d-flex align-items-center flex-wrap gap-2">
+                        <!-- NAME -->
+                        <h2 class="page-heading text-gray-900 fw-bolder fs-3 mb-0 me-2">
+                            <i class="fa fa-child text-primary me-1"></i>
+                            ZAYAN MUGHAL
+                        </h2>
+                        <!-- ACTIVE -->
+                        <span class="badge badge-success fw-bold px-3 py-2">
+                            <i class="fa fa-check-circle me-1"></i>
+                            Additional Course
+                        </span>
+                        <span class="badge badge-success fw-bold px-3 py-2">
+                            <i class="fa fa-check-circle me-1"></i>
+                            Level-1 Additional Course </span>
+                        <!-- ATTEMPT -->
+                        <span class="badge badge-danger fw-bold px-3 py-2">
+                            <i class="fa fa-layer-group me-1"></i>
+                            Attempt 1st </span>
+                        <!-- TIMER -->
+                        <span class="badge badge-primary fw-bolder px-3 py-2">
+                            <i class="fa fa-clock me-1"></i>
+                            <span id="additionalClassTimer">
+                                00:00:00
+                            </span>
+                        </span>
+                    </div>
+                    <!-- RIGHT -->
+                    <div>
+                        <button onclick="window.location.href='daily-classes.php'"
+                            class="btn btn-sm fw-bold btn-danger px-4">
+                            <i class="fa fa-times me-1"></i>
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <script>
+                (function () {
+                    // MYSQL DATETIME
+                    let startTime = "2026-06-17 20:26:34";
+                    // Safe format for JS
+                    startTime = startTime.replace(' ', 'T');
+                    let start = new Date(startTime).getTime();
+                    function updateTimer() {
+                        let now = new Date().getTime();
+                        let distance = now - start;
+                        // prevent negative
+                        if (distance < 0) {
+                            distance = 0;
+                        }
+                        let hours = Math.floor(distance / (1000 * 60 * 60));
+                        let minutes = Math.floor(
+                            (distance % (1000 * 60 * 60)) / (1000 * 60)
+                        );
+                        let seconds = Math.floor(
+                            (distance % (1000 * 60)) / 1000
+                        );
+                        hours = String(hours).padStart(2, '0');
+                        minutes = String(minutes).padStart(2, '0');
+                        seconds = String(seconds).padStart(2, '0');
+                        const timerEl = document.getElementById('additionalClassTimer');
+                        if (timerEl) {
+                            timerEl.innerHTML =
+                                hours + ':' + minutes + ':' + seconds;
+                        }
+                    }
+                    // Run immediately
+                    updateTimer();
+                    // Update every second
+                    setInterval(updateTimer, 1000);
+                })();
+            </script>
+            <!--end::Toolbar-->
+            <!--begin::Content-->
+            <div id="kt_app_content" class="app-content flex-column-fluid">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- ================= LEFT SIDE (9) ================= -->
+                        <div class="col-lg-9">
+                            <div class="card shadow-sm border-0 h-100">
+                                <div class="card-body d-flex flex-column">
+                                    <!-- ================= TOP NAV ================= -->
+                                    <div class="card border-0 shadow-sm mb-4" style="border-radius:18px;">
+                                        <div class="card-body py-3 px-4">
+                                            <div
+                                                class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+                                                <!-- ================= PREVIOUS ================= -->
+                                                <div style="width:145px;">
+                                                    <a href="lesson_additional.php?data=eyJoaWQiOjE5ODM5NTc5LCJzaWQiOjg4MzIsImFwYWdlIjoxMiwiYWxlc3Nvbl9pZCI6MzY1fTo6N2NjMDhhNWVjZjRjNzgzNThiNWE4ZmI5MDBjMWY1Mzc3MTJjYWVkODBkNDkzODkyYmU2MWE3Yzk0MWZmYmVmNw%3D%3D"
+                                                        id="prevPageBtn"
+                                                        class="btn btn-primary fw-bold w-100 d-flex align-items-center justify-content-center gap-2">
+                                                        <i class="ki-outline ki-left fs-5"></i>
+                                                        <span>Previous</span>
+                                                        <kbd
+                                                            class="bg-white text-primary px-2 py-1 rounded fs-8 border">P</kbd></a>
+                                                </div>
+                                                <!-- ================= CENTER INFO ================= -->
+                                                <div class="flex-grow-1 text-center px-2">
+                                                    <!-- LESSON -->
+                                                    <div class="fw-bolder text-gray-900 fs-2 mb-1">
+                                                        Islamic Alphabets </div>
+                                                    <!-- PAGE INFO -->
+                                                    <div
+                                                        class="d-flex justify-content-center align-items-center gap-2 flex-wrap">
+                                                        <span class="badge badge-light-success px-3 py-2 fw-semibold">
+                                                            U-13 (L-Lailaha) </span>
+                                                        <span class="text-muted fw-semibold">Page 13 / 27</span>
+                                                    </div>
+                                                    <!-- PROGRESS -->
+                                                    <div class="mt-3 px-lg-10 px-2">
+                                                        <div class="progress h-8px bg-light-primary">
+                                                            <div class="progress-bar bg-primary" role="progressbar"
+                                                                style="width: 48%;" aria-valuenow="48" aria-valuemin="0"
+                                                                aria-valuemax="100">
+                                                            </div>
+                                                        </div>
+                                                        <div class="text-muted small mt-1 fw-semibold">
+                                                            48% Completed
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ================= NEXT ================= -->
+                                                <div style="width:145px;">
+                                                    <a href="lesson_additional.php?data=eyJoaWQiOjE5ODM5NTc5LCJzaWQiOjg4MzIsImFwYWdlIjoxNCwiYWxlc3Nvbl9pZCI6MzY1fTo6ZjNmNWQ4YjA4Njc0YWFlOWZjM2JiODNiNTU5YmU0MGQwMjRhOTllMTU5NWExZmVjMjU2N2Y1MDc4MjIzOWQwMg%3D%3D"
+                                                        id="nextPageBtn"
+                                                        class="btn btn-primary fw-bold w-100 d-flex align-items-center justify-content-center gap-2">
+                                                        <span>Next</span>
+                                                        <kbd
+                                                            class="bg-white text-primary px-2 py-1 rounded fs-8 border">N</kbd>
+                                                        <i class="ki-outline ki-right fs-5"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- ================= IMAGE ================= -->
+                                    <div id="lessonPhotoSwipe"
+                                        class="lesson-viewer-box d-flex align-items-center justify-content-center mb-3">
+                                        <a href="../../uploads/563337_1681486505.jpeg" class="lesson-image-link"
+                                            data-pswp-width="1080" data-pswp-height="1637" target="_blank">
+                                            <img src="../../uploads/563337_1681486505.jpeg" alt="U-13 (L-Lailaha)"
+                                                onerror="this.src='../../uploads/17043_1491213790.jpeg'">
+                                        </a>
+                                    </div>
+                                    <!-- ================= BOTTOM ACTION BAR ================= -->
+                                    <div class="mt-4">
+                                    </div>
+
+                                </div> <!-- card-body -->
+                            </div> <!-- card -->
+                        </div> <!-- col -->
+                        <div class="col-lg-3">
+                            <!-- ================= LAST CLASS ================= -->
+                            <div class="card border-0 shadow-sm mb-4" style="border-radius:16px;">
+                                <div class="card-body p-4">
+                                    <!-- HEADER -->
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div>
+                                            <div class="fw-bold text-dark">Last Class Details</div>
+                                            <small class="text-muted">Additional Course Details</small>
+                                        </div>
+                                        <!-- <a href="lesson_additional.php?data=eyJoaWQiOjE5ODM5NTc5LCJzaWQiOjg4MzIsImFwYWdlIjoxMiwiYWxlc3Nvbl9pZCI6MzY1fTo6N2NjMDhhNWVjZjRjNzgzNThiNWE4ZmI5MDBjMWY1Mzc3MTJjYWVkODBkNDkzODkyYmU2MWE3Yzk0MWZmYmVmNw%3D%3D"
+class="btn btn-sm btn-primary px-3 rounded-pill shadow-sm">
+▶ Continue
+</a> -->
+                                    </div>
+                                    <!-- LESSON TITLE -->
+                                    <div class="mb-2">
+                                        <div class="fw-semibold text-dark" style="font-size:15px;">
+                                            Islamic Alphabets </div>
+                                    </div>
+                                    <!-- META INFO -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3 small">
+                                        <span class="badge bg-light text-dark border">
+                                            📘 U-12 (K-Kabah) </span>
+                                        <span class="badge bg-light text-dark border">
+                                            👨‍🏫 Muhammad Aneeb Akhtar </span>
+                                        <span class="badge bg-light text-dark border">
+                                            👨‍🎓 Zayan Mughal </span>
+                                    </div>
+                                    <!-- NOTES -->
+                                    <div class="bg-light rounded-3 p-3 mb-3"
+                                        style="font-size:13px; line-height:1.5; min-height:60px;">
+                                        K-Kabah Continue...</div>
+                                    <!-- FOOTER -->
+                                    <div class="d-flex justify-content-between align-items-center small">
+                                        <div class="text-muted">
+                                            📅 - </div>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#historyModal"
+                                            onclick="openHistoryModal(8832)">
+                                            Class History →
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ================= Current Para/Chapter ================= -->
+                            <div class="card border-0 shadow-sm mb-4" style="border-radius:16px;">
+                                <div class="card-body p-4">
+                                    <!-- HEADER -->
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div>
+                                            <div class="fw-bold text-dark">Current Chapter</div>
+                                            <small class="text-muted">Continue your current Lesson</small>
+                                        </div>
+                                        <a href="lesson_additional.php?data=eyJoaWQiOjE5ODM5NTc5LCJzaWQiOjg4MzIsImFwYWdlIjoxMiwiYWxlc3Nvbl9pZCI6MzY1fTo6N2NjMDhhNWVjZjRjNzgzNThiNWE4ZmI5MDBjMWY1Mzc3MTJjYWVkODBkNDkzODkyYmU2MWE3Yzk0MWZmYmVmNw%3D%3D"
+                                            class="btn btn-sm btn-success px-3 rounded-pill shadow-sm">
+                                            ▶ Open Current Chapter
+                                        </a>
+                                    </div>
+                                    <!-- LESSON TITLE -->
+                                    <div class="mb-2">
+                                        <div class="fw-semibold text-dark" style="font-size:15px;">
+                                            Islamic Alphabets </div>
+                                    </div>
+                                    <!-- FOOTER -->
+                                    <div class="d-flex justify-content-between align-items-center small">
+                                        <div class="text-muted">
+                                            📍 Active Chapter
+                                        </div>
+                                        <span class="text-success fw-semibold">
+                                            In Progress
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ================= REMARKS CARD ================= -->
+                            <div class="card shadow-sm border-0 mb-4" style="border-radius:14px;">
+                                <div class="card-body p-3">
+                                    <!-- HEADER -->
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div class="fw-bold text-dark">Class Remarks</div>
+                                        <span class="badge bg-light-primary text-primary">
+                                            Editable </span>
+                                    </div>
+                                    <!-- LOCK MESSAGE -->
+                                    <!-- FORM -->
+                                    <form method="POST" action="save_additional.php">
+                                        <!-- REMARKS -->
+                                        <textarea name="remarks" class="form-control form-control-sm mb-3" rows="3"
+                                            style="border-radius:10px;">Details: </textarea>
+                                        <!-- RATING (Improved UI) -->
+                                        <label class="small fw-semibold text-muted mb-1">Performance</label>
+                                        <select name="rating" required class="form-select form-select-sm mb-3"
+                                            style="padding:8px 12px; height:42px; border-radius:10px;">
+                                            <option value="" disabled selected>⭐ Select Performance</option>
+                                            <option value="6">⭐ Average</option>
+                                            <option value="4">⭐ Excellent</option>
+                                            <option value="3">⭐ Very Good</option>
+                                            <option value="2">⭐ Good</option>
+                                            <option value="1">⭐ Not Good</option>
+                                        </select>
+                                        <!-- HIDDEN FIELDS -->
+                                        <input type="hidden" name="hid" value="19839579">
+                                        <input type="hidden" name="sid" value="8832">
+                                        <input type="hidden" name="adept_id" value="125">
+                                        <input type="hidden" name="alesson_id" value="365">
+                                        <input type="hidden" name="apage" value="13">
+                                        <input type="hidden" name="pageId" value="3092">
+                                        <!-- SUBMIT -->
+                                        <button type="submit"
+                                            onclick="return confirm('Are you sure you want to save Additional lesson and mark class as completed?')"
+                                            class="btn btn-primary w-100 fw-semibold" style="border-radius:10px;">
+                                            💾 Mark as Completed </button>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- ================= Completed Chapters ================= -->
+                            <div class="card border-0 shadow-sm mb-4" style="border-radius:16px;">
+                                <div class="card-body p-3" style="max-height: 400px; overflow-y: auto;">
+                                    <!-- HEADER -->
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <div class="fw-bold text-dark" style="font-size:14px;">
+                                            Completed Chapters
+                                            <span class="text-muted fw-normal">(Attempt 1)</span>
+                                        </div>
+                                        <span class="badge bg-light-success text-success border">
+                                            1 Done
+                                        </span>
+                                    </div>
+                                    <div class="d-flex flex-column gap-2">
+                                        <a href="lesson_additional.php?data=eyJoaWQiOjE5ODM5NTc5LCJzaWQiOjg4MzIsImFwYWdlIjoxLCJhbGVzc29uX2lkIjoxNDJ9OjpkZmVkYTEyN2FlMGQ4MGZiMmRkNzMzNWVhYTE0NjRmOWE0NzBiNTQzMTEwMGVjZjYxYWRkNTQ3YTA2M2UxMGI4"
+                                            class="d-flex justify-content-between align-items-center text-decoration-none px-2 py-1 border rounded bg-hover-light"
+                                            style="font-size:12px;">
+                                            <!-- LEFT -->
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span class="text-dark">
+                                                    Kalimas and Manners </span>
+                                            </div>
+                                            <!-- RIGHT -->
+                                            <div class="text-warning" style="font-size:12px;">
+                                                ⭐⭐⭐⭐⭐ </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- FOOTER -->
+                                <div
+                                    class="card-footer py-2 px-3 d-flex justify-content-between align-items-center bg-light">
+                                    <div></div>
+                                    <a href="#"
+                                        class="fw-semibold text-primary text-decoration-none d-flex align-items-center gap-1"
+                                        data-bs-toggle="modal" data-bs-target="#chapterHistoryModal"
+                                        onclick="loadChapterHistory(8832, 2)">
+                                        Chapter History →
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end::Content-->
+
+    <div class="modal fade" id="ratingModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border-radius:14px;">
+                <form method="POST" action="complete_achapter.php">
+                    <!-- HEADER -->
+                    <div class="modal-header">
+                        <h5 class="modal-title fw-bold">Rate Chapter</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <!-- BODY -->
+                    <div class="modal-body">
+                        <input type="hidden" name="complete_achapter" value="1">
+                        <label class="form-label small text-muted mb-2">
+                            Select Rating
+                        </label>
+                        <select name="chapter_rating" class="form-select" style="height:42px; border-radius:10px;"
+                            required>
+                            <option value="">⭐ Choose Rating</option>
+                            <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+                            <option value="4">⭐⭐⭐⭐ Good</option>
+                            <option value="3">⭐⭐⭐ Average</option>
+                            <option value="2">⭐⭐ Poor</option>
+                            <option value="1">⭐ Very Poor</option>
+                        </select>
+                    </div>
+                    <!-- HIDDEN -->
+                    <input type="hidden" name="hid" value="19839579">
+                    <input type="hidden" name="sid" value="8832">
+                    <input type="hidden" name="tid" value="199">
+                    <input type="hidden" name="alesson_id" value="365">
+                    <input type="hidden" name="adept_id" value="125">
+                    <input type="hidden" name="acount" value="0">
+                    <input type="hidden" name="temp" value="0">
+                    <!-- FOOTER -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">
+                            Cancel
+                        </button>
+                        <button type="submit" class="btn btn-success fw-bold"
+                            onclick="this.disabled=true; this.innerText='Saving...'; this.form.submit();">
+                            Submit & Complete
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Modal to Add Request for Additional Course Change -->
+    <div class="modal fade" id="AddCourseChangeModal" tabindex="-1" aria-labelledby="AddCourseChangeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form action="complete_acourse.php" method="POST">
+                    <!-- HEADER -->
+                    <div class="modal-header">
+                        <h5 class="modal-title fw-bold" id="AddCourseChangeModalLabel">
+                            Change Additional Course
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <!-- BODY -->
+                    <div class="modal-body">
+                        <!-- Hidden Fields -->
+                        <input type="hidden" name="hid" value="19839579">
+                        <input type="hidden" name="sid" value="8832">
+                        <input type="hidden" name="tid" value="199">
+                        <input type="hidden" name="adept_id" value="125">
+                        <input type="hidden" name="alesson_id" value="365">
+                        <input type="hidden" name="acount" value="0">
+                        <input type="hidden" name="rating" value="5">
+                        <!-- Course Dropdown -->
+                        <div class="form-group">
+                            <label class="form-label fw-semibold mb-2">Select New Course</label>
+                            <select required class="form-control select2" name="new" id="new">
+                                <option value="">Please select a course...</option>
+                                <option value="126">
+                                    Level-2 Additional Course (Advanced)
+                                </option>
+                                <option value="127">
+                                    Level-3 Additional Course (Advanced)
+                                </option>
+                                <option value="128">
+                                    Level-4 Additional Course (Advanced)
+                                </option>
+                                <option value="133">
+                                    Tuition (Advanced)
+                                </option>
+                                <option value="135">
+                                    Quran Translation (Ad) (Advanced)
+                                </option>
+                                <option value="138">
+                                    Trial Class Additional Course (Advanced)
+                                </option>
+                                <option value="139">
+                                    N/A (Advanced)
+                                </option>
+                                <option value="146">
+                                    Memorization of Surahs (Advanced)
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- FOOTER -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light btn-sm" data-bs-dismiss="modal">
+                            Cancel
+                        </button>
+                        <button type="submit" class="btn btn-success btn-sm fw-semibold">
+                            Proceed
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- ================= Chapter History Modal ================= -->
+    <div class="modal fade" id="chapterHistoryModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen p-12">
+            <div class="modal-content rounded-3 shadow-sm">
+                <!-- ================= HEADER ================= -->
+                <div class="modal-header">
+                    <div>
+                        <h2 class="fw-bold text-gray-900 mb-1">
+                            📘 Chapter History
+                        </h2>
+                        <div class="text-muted fs-7">
+                            Student learning progress & completed chapters
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-icon btn-sm btn-light" data-bs-dismiss="modal">
+                        <i class="ki-outline ki-cross fs-2"></i>
+                    </button>
+                </div>
+                <!-- ================= BODY ================= -->
+                <div class="modal-body px-8 py-4">
+                    <!-- 🔄 LOADER -->
+                    <div id="chapterLoader" class="text-center py-20">
+                        <div class="d-flex justify-content-center mb-3">
+                            <span class="spinner-border text-primary w-40px h-40px"></span>
+                        </div>
+                        <div class="text-muted fs-6">
+                            Loading chapter history...
+                        </div>
+                    </div>
+                    <!-- ================= TABLE CARD ================= -->
+                    <div id="chapterTableWrapper" class="d-none">
+                        <div class="card border-0 shadow-sm rounded-3">
+                            <!-- TABLE -->
+                            <div class="table-responsive">
+                                <table class="table align-middle table-row-dashed table-row-gray-300 gy-3 gs-0 mb-0">
+                                    <!-- HEADER -->
+                                    <thead class="bg-light">
+                                        <tr class="text-gray-600 fw-bold fs-7 text-uppercase">
+                                            <th class="w-40px text-center">#</th>
+                                            <th class="min-w-120px">Date</th>
+                                            <th class="min-w-220px">Chapter</th>
+                                            <th class="text-center min-w-90px">Attempt</th>
+                                            <th class="min-w-150px">Student</th>
+                                            <th class="min-w-150px">Teacher</th>
+                                            <th class="text-center min-w-120px">Rating</th>
+                                        </tr>
+                                    </thead>
+                                    <!-- BODY -->
+                                    <tbody id="chapterData" class="fw-semibold text-gray-800"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ================= FOOTER ================= -->
+                <div class="modal-footer border-0 px-8 py-4 d-flex justify-content-between">
+                    <!-- LEFT -->
+                    <div class="text-muted fs-7">
+                        Showing latest chapter history
+                    </div>
+                    <!-- RIGHT -->
+                    <button type="button" class="btn btn-light-primary btn-sm px-5" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Classes history Lesson Pages-->
+    <div class="modal fade" id="historyModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen p-15">
+            <div class="modal-content rounded-3 shadow-sm">
+                <!-- HEADER -->
+                <div class="modal-header">
+                    <div class="d-flex align-items-center gap-3 w-100 justify-content-between">
+                        <!-- LEFT -->
+                        <h4 class="fw-bold mb-0">
+                            📘 Lesson History
+                        </h4>
+                        <!-- MONTH NAV -->
+                        <div class="d-flex align-items-center gap-3">
+                            <button class="btn btn-sm btn-danger" onclick="changeMonth(-1)">←</button>
+                            <span id="historyMonth" class="fw-bold text-primary"></span>
+                            <button class="btn btn-sm btn-danger" onclick="changeMonth(1)">→</button>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-sm btn-icon btn-light" data-bs-dismiss="modal">
+                        <i class="ki-outline ki-cross fs-2"></i>
+                    </button>
+                </div>
+                <!-- BODY -->
+                <div class="modal-body">
+                    <!-- LOADER -->
+                    <div id="historyLoader" class="text-center py-10">
+                        <div class="spinner-border text-primary"></div>
+                    </div>
+                    <!-- TABLE -->
+                    <div id="historyData" class="d-none"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="scheduleModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen p-9">
+            <div class="modal-content">
+                <!-- Header -->
+                <div class="modal-header">
+                    <h3 class="modal-title">Teacher Schedule</h3>
+                    <div class="btn btn-icon btn-sm btn-active-light-primary ms-2" data-bs-dismiss="modal">✕</div>
+                </div>
+                <!-- Body -->
+                <div class="modal-body" id="scheduleContent">
+                    <div class="text-center py-10">
+                        <span class="spinner-border text-primary"></span>
+                    </div>
+                </div>
+                <!-- Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Zoom Modal -->
+    <div class="modal fade" id="basic" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!-- Header -->
+                <div class="modal-header border-0 pb-0">
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="ki-outline ki-screen fs-2 text-primary"></i>
+                        <h3 class="fw-bold m-0">Zoom Details</h3>
+                    </div>
+                    <button type="button" class="btn btn-icon btn-sm btn-active-light-primary" data-bs-dismiss="modal">
+                        <i class="ki-outline ki-cross fs-2"></i>
+                    </button>
+                </div>
+                <!-- Body -->
+                <div class="modal-body pt-4">
+                    <!-- Card -->
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <!-- Shift -->
+                            <div class="mb-4">
+                                <span class="badge badge-light-primary fs-7 fw-semibold">
+                                    Shift: Evening </span>
+                            </div>
+                            <!-- Info Rows -->
+                            <div class="d-flex flex-column gap-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-muted">Zoom ID</span>
+                                    <span class="fw-semibold text-gray-800">
+                                        808 909 9033 </span>
+                                </div>
+                                <div class="separator separator-dashed"></div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-muted">Zoom Email</span>
+                                    <span class="fw-semibold text-gray-800">
+                                        <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                            data-cfemail="53293c3c3e616113222621323d26387d303c3e">[email&#160;protected]</a>
+                                    </span>
+                                </div>
+                                <div class="separator separator-dashed"></div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-muted">Zoom Password</span>
+                                    <span class="fw-semibold text-gray-800">
+                                        Teacher786@ </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer -->
+                <div class="modal-footer border-0 pt-0">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal"> Close </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pending Reschedlue Modal -->
+    <div class="modal fade" id="rescheduleListModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen p-9">
+            <div class="modal-content">
+                <!-- HEADER -->
+                <div class="modal-header border-0 py-5 px-8">
+                    <h2 class="fw-bold text-danger">
+                        <i class="ki-outline ki-briefcase fs-2 me-2"></i>
+                        Reschedule Pending for Approval
+                    </h2>
+                    <button type="button" class="btn btn-icon btn-sm btn-active-light-primary" data-bs-dismiss="modal">
+                        <i class="ki-outline ki-cross fs-1"></i>
+                    </button>
+                </div>
+                <!-- BODY -->
+                <div class="modal-body py-9 px-10">
+                    <div id="rescheduleLoader" class="text-center py-10">
+                        <div class="spinner-border text-primary"></div>
+                        <div class="mt-3 text-muted">Loading...</div>
+                    </div>
+                    <div id="rescheduleContent" class="d-none"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Student Leave Modal -->
+    <div class="modal fade" id="leaveModal" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <!-- HEADER -->
+                <div class="modal-header border-0 py-5 px-8">
+                    <h2 class="fw-bold text-warning">
+                        <i class="ki-outline ki-calendar-remove fs-2 me-2"></i>
+                        Students on Leave
+                    </h2>
+                    <button type="button" class="btn btn-icon btn-sm btn-active-light-primary" data-bs-dismiss="modal">
+                        <i class="ki-outline ki-cross fs-1"></i>
+                    </button>
+                </div>
+                <!-- BODY -->
+                <div class="modal-body py-9 px-10">
+                    <div id="leaveLoader" class="text-center py-10">
+                        <div class="spinner-border text-warning"></div>
+                        <div class="mt-3 text-muted">Loading...</div>
+                    </div>
+                    <div id="leaveContent" class="d-none"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Student Schedule Modal -->
+    <div class="modal fade" id="modal-schedule" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-3 shadow-sm">
+                <!-- HEADER -->
+                <div class="modal-header">
+                    <h3 class="fw-bold">Student Schedule</h3>
+                    <button type="button" class="btn btn-icon btn-sm btn-active-light-primary" data-bs-dismiss="modal">
+                        <i class="ki-outline ki-cross fs-2"></i>
+                    </button>
+                </div>
+                <!-- BODY -->
+                <div class="modal-body px-6 py-5" id="modal-schedule-content">
+                    <div class="text-center text-muted">Loading...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Age Modal -->
+    <div class="modal fade" id="ageModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 shadow-lg border-0">
+                <!-- HEADER -->
+                <div class="modal-header border-0 pb-0">
+                    <h4 class="fw-bold mb-0">
+                        🎂 Update Birth Year
+                    </h4>
+                    <button type="button" class="btn btn-icon btn-sm btn-light" data-bs-dismiss="modal">
+                        ✖
+                    </button>
+                </div>
+                <!-- BODY -->
+                <div class="modal-body px-4 py-4">
+                    <form action="update_age.php" method="POST">
+                        <input type="hidden" name="student_id" id="modalStudentId">
+                        <!-- SELECT -->
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold text-muted mb-2">
+                                Select Birth Year
+                            </label>
+                            <select name="birth_year" id="modalBirthYear" class="form-select form-select-solid select2"
+                                required>
+                                <option value="">-- Choose Year --</option>
+                                <option value='2026'>2026</option>
+                                <option value='2025'>2025</option>
+                                <option value='2024'>2024</option>
+                                <option value='2023'>2023</option>
+                                <option value='2022'>2022</option>
+                                <option value='2021'>2021</option>
+                                <option value='2020'>2020</option>
+                                <option value='2019'>2019</option>
+                                <option value='2018'>2018</option>
+                                <option value='2017'>2017</option>
+                                <option value='2016'>2016</option>
+                                <option value='2015'>2015</option>
+                                <option value='2014'>2014</option>
+                                <option value='2013'>2013</option>
+                                <option value='2012'>2012</option>
+                                <option value='2011'>2011</option>
+                                <option value='2010'>2010</option>
+                                <option value='2009'>2009</option>
+                                <option value='2008'>2008</option>
+                                <option value='2007'>2007</option>
+                                <option value='2006'>2006</option>
+                                <option value='2005'>2005</option>
+                                <option value='2004'>2004</option>
+                                <option value='2003'>2003</option>
+                                <option value='2002'>2002</option>
+                                <option value='2001'>2001</option>
+                                <option value='2000'>2000</option>
+                                <option value='1999'>1999</option>
+                                <option value='1998'>1998</option>
+                                <option value='1997'>1997</option>
+                                <option value='1996'>1996</option>
+                                <option value='1995'>1995</option>
+                                <option value='1994'>1994</option>
+                                <option value='1993'>1993</option>
+                                <option value='1992'>1992</option>
+                                <option value='1991'>1991</option>
+                                <option value='1990'>1990</option>
+                                <option value='1989'>1989</option>
+                                <option value='1988'>1988</option>
+                                <option value='1987'>1987</option>
+                                <option value='1986'>1986</option>
+                                <option value='1985'>1985</option>
+                                <option value='1984'>1984</option>
+                                <option value='1983'>1983</option>
+                                <option value='1982'>1982</option>
+                                <option value='1981'>1981</option>
+                                <option value='1980'>1980</option>
+                                <option value='1979'>1979</option>
+                                <option value='1978'>1978</option>
+                                <option value='1977'>1977</option>
+                                <option value='1976'>1976</option>
+                                <option value='1975'>1975</option>
+                                <option value='1974'>1974</option>
+                                <option value='1973'>1973</option>
+                                <option value='1972'>1972</option>
+                                <option value='1971'>1971</option>
+                                <option value='1970'>1970</option>
+                                <option value='1969'>1969</option>
+                                <option value='1968'>1968</option>
+                                <option value='1967'>1967</option>
+                                <option value='1966'>1966</option>
+                                <option value='1965'>1965</option>
+                                <option value='1964'>1964</option>
+                                <option value='1963'>1963</option>
+                                <option value='1962'>1962</option>
+                                <option value='1961'>1961</option>
+                                <option value='1960'>1960</option>
+                                <option value='1959'>1959</option>
+                                <option value='1958'>1958</option>
+                                <option value='1957'>1957</option>
+                                <option value='1956'>1956</option>
+                                <option value='1955'>1955</option>
+                                <option value='1954'>1954</option>
+                                <option value='1953'>1953</option>
+                                <option value='1952'>1952</option>
+                                <option value='1951'>1951</option>
+                                <option value='1950'>1950</option>
+                                <option value='1949'>1949</option>
+                                <option value='1948'>1948</option>
+                                <option value='1947'>1947</option>
+                                <option value='1946'>1946</option>
+                            </select>
+                            <!-- helper text -->
+                            <div class="form-text text-muted text-center mt-2">
+                                Age will be calculated automatically
+                            </div>
+                        </div>
+                        <!-- ACTIONS -->
+                        <div class="d-flex justify-content-end gap-2 pt-2">
+                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">
+                                Cancel
+                            </button>
+                            <button type="submit" class="btn btn-primary fw-semibold px-4">
+                                💾 Save
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Class Modal-->
+    <div class="modal fade" id="classModal" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content rounded-3 shadow-sm">
+                <!-- HEADER -->
+                <div class="modal-header border-0 pb-0">
+                    <!-- LEFT -->
+                    <div class="d-flex flex-column">
+                        <h3 class="fw-bold text-gray-900 mb-1" id="modalTitle">
+                            📋 Classes
+                        </h3>
+                        <span class="text-muted fs-7">
+                            Overview of selected classes
+                        </span>
+                    </div>
+                    <!-- RIGHT -->
+                    <div class="d-flex align-items-center gap-3">
+                        <span class="badge badge-light-primary fw-bold px-4 py-2">
+                            <i class="ki-outline ki-calendar fs-6 me-1"></i>
+                            Wednesday, 17 Jun 2026 </span>
+                        <button type="button" class="btn btn-icon btn-sm btn-active-light-primary"
+                            data-bs-dismiss="modal">
+                            <i class="ki-outline ki-cross fs-2"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- BODY -->
+                <div class="modal-body pt-4 pb-5 px-6">
+                    <!-- LOADER -->
+                    <div id="classLoader" class="text-center py-10 d-none">
+                        <div class="spinner-border text-primary"></div>
+                        <div class="text-muted mt-3">Loading classes...</div>
+                    </div>
+                    <!-- TABLE -->
+                    <div class="table-responsive">
+                        <table class="table align-middle table-row-dashed fs-6 gy-4">
+                            <thead>
+                                <tr class="text-gray-500 fw-bold fs-7 text-uppercase">
+                                    <th class="w-40px">#</th>
+                                    <th>Student</th>
+                                    <th>Teacher</th>
+                                    <th class="text-center">Time</th>
+                                    <th class="text-center">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="classData"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Group Student Notes-->
+    <div class="modal fade" id="studentNoteModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered mw-500px">
+            <div class="modal-content">
+                <!-- HEADER -->
+                <div class="modal-header">
+                    <h2 class="fw-bold">Add Student Note</h2>
+                    <div class="btn btn-icon btn-sm btn-active-light-primary" data-bs-dismiss="modal">
+                        <i class="ki-duotone ki-cross fs-2"></i>
+                    </div>
+                </div>
+                <!-- BODY -->
+                <div class="modal-body py-5 px-lg-10">
+                    <input type="hidden" id="note_sid">
+                    <input type="hidden" id="note_tid">
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold">Note</label>
+                        <textarea class="form-control" id="note_message" rows="4"
+                            placeholder="Write note..."></textarea>
+                    </div>
+                    <input type="hidden" id="note_type" value="1">
+                </div>
+                <!-- FOOTER -->
+                <div class="modal-footer">
+                    <button class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+                    <button class="btn btn-primary" id="saveStudentNote">
+                        <i class="ki-duotone ki-check fs-2 me-2"></i>
+                        Save Note
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="studentNotesModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <!-- HEADER -->
+                <div class="modal-header">
+                    <h2 class="fw-bold">Student Notes</h2>
+                    <div class="btn btn-icon btn-sm btn-active-light-primary" data-bs-dismiss="modal">
+                        <i class="ki-duotone ki-cross fs-2"></i>
+                    </div>
+                </div>
+                <!-- BODY -->
+                <div class="modal-body py-5 px-lg-10" style="max-height:500px; overflow-y:auto;">
+                    <div id="studentNotesContent">
+                        <div class="text-center text-muted">
+                            <span class="spinner-border spinner-border-sm me-2"></span>
+                            Loading notes...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ===================================================== -->
+    <!-- BEGIN :: EDIT ZOOM PASSWORD MODAL -->
+    <!-- ===================================================== -->
+    <div class="modal fade" id="editZoomModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content rounded-4 shadow-lg border-0">
+                <!-- Header -->
+                <div class="modal-header border-0 pb-0 px-10 pt-8">
+                    <div class="d-flex align-items-center">
+                        <div class="symbol symbol-45px me-4">
+                            <span class="symbol-label bg-light-primary">
+                                <i class="ki-outline ki-key fs-2 text-primary"></i>
+                            </span>
+                        </div>
+                        <div>
+                            <h2 class="fw-bold text-gray-900 mb-1">
+                                Update Zoom Password
+                            </h2>
+                            <div class="text-muted fs-7">
+                                Modify Zoom meeting credentials
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Close -->
+                    <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+                        <i class="ki-outline ki-cross fs-1"></i>
+                    </div>
+                </div>
+                <!-- Form -->
+                <form id="zoomEditForm" action="zoom-pass.php" method="GET">
+                    <!-- Body -->
+                    <div class="modal-body px-10 py-8">
+                        <input type="hidden" name="zid" id="zoomIDInput">
+                        <!-- Password -->
+                        <div class="fv-row">
+                            <label class="required fw-semibold fs-6 mb-3">
+                                Zoom Password
+                            </label>
+                            <div class="position-relative">
+                                <i
+                                    class="ki-outline ki-lock fs-2 position-absolute top-50 translate-middle-y ms-4 text-gray-500"></i>
+                                <input type="text" name="pass" id="zoomPassInput"
+                                    class="form-control form-control-solid ps-12" placeholder="Enter Zoom Password"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Footer -->
+                    <div class="modal-footer border-0 px-10 pb-8 pt-0">
+                        <button type="button" class="btn btn-light me-3" data-bs-dismiss="modal">
+                            Cancel
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="ki-outline ki-check fs-5 me-1"></i>
+                            Save Changes
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- END :: EDIT ZOOM PASSWORD MODAL -->
+    <!-- ===================================================== -->
+    <!-- BEGIN :: ASSIGN TEACHER MODAL -->
+    <!-- ===================================================== -->
+    <div class="modal fade" id="assignModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-4 shadow-lg border-0">
+                <!-- Header -->
+                <div class="modal-header border-0 pb-0 px-10 pt-8">
+                    <div class="d-flex align-items-center">
+                        <div class="symbol symbol-45px me-4">
+                            <span class="symbol-label bg-light-success">
+                                <i class="ki-outline ki-user fs-2 text-success"></i>
+                            </span>
+                        </div>
+                        <div>
+                            <h2 class="fw-bold text-gray-900 mb-1">
+                                Assign Teacher
+                            </h2>
+                            <div class="text-muted fs-7">
+                                Allocate teacher to Zoom shift
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Close -->
+                    <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+                        <i class="ki-outline ki-cross fs-1"></i>
+                    </div>
+                </div>
+                <!-- Form -->
+                <form method="GET" action="zoom-update.php">
+                    <!-- Body -->
+                    <div class="modal-body px-10 py-8">
+                        <input type="hidden" name="id" id="modal_id">
+                        <input type="hidden" name="old" id="modal_tid">
+                        <input type="hidden" name="type" id="modal_type">
+                        <div class="row">
+                            <!-- Teacher -->
+                            <div class="col-md-12 mb-7">
+                                <label class="required fw-semibold fs-6 mb-3">
+                                    Select Teacher
+                                </label>
+                                <select class="form-select form-select-solid" data-control="select2"
+                                    data-dropdown-parent="#assignModal" data-placeholder="Choose Teacher" name="new"
+                                    id="new" required>
+                                    <option value=""></option>
+                                    <optgroup label="Remove Allocation">
+                                        <option value="0">
+                                            Remove Teacher
+                                        </option>
+                                    </optgroup>
+                                    <optgroup label="Teacher Allocation">
+                                        <option value="4">
+                                            Hafiza Maryam Bibi </option>
+                                        <option value="12">
+                                            Muhammad Zain ul Abideen </option>
+                                        <option value="23">
+                                            Waseem Hassan </option>
+                                        <option value="40">
+                                            Rashida Khanam </option>
+                                        <option value="71">
+                                            Muhammad Shahzad </option>
+                                        <option value="75">
+                                            Hamza Kanwal </option>
+                                        <option value="79">
+                                            Talat Hussain Shah </option>
+                                        <option value="80">
+                                            Zeeshan Qasim </option>
+                                        <option value="92">
+                                            Adil Tahawar </option>
+                                        <option value="105">
+                                            Saleem Ullah </option>
+                                        <option value="110">
+                                            Hafiz Muhammad Usman </option>
+                                        <option value="117">
+                                            Mohsin Ali </option>
+                                        <option value="129">
+                                            Zubair Aslam </option>
+                                        <option value="140">
+                                            Khadija Mushtaq </option>
+                                        <option value="153">
+                                            Talha Shah </option>
+                                        <option value="167">
+                                            Iqra Awan </option>
+                                        <option value="173">
+                                            Adeel Shah </option>
+                                        <option value="187">
+                                            Muhammad Zahid Razzaq </option>
+                                        <option value="192">
+                                            Amna Ayoub </option>
+                                        <option value="194">
+                                            Muhammad Abubakar Saqib </option>
+                                        <option value="199">
+                                            Muhammad Aneeb Akhtar </option>
+                                        <option value="202">
+                                            Tooba Waheed </option>
+                                        <option value="210">
+                                            Summaya Shafaat </option>
+                                        <option value="213">
+                                            Muhammad Ahmad </option>
+                                        <option value="219">
+                                            Faizan Muhammad </option>
+                                        <option value="224">
+                                            Amna Nawaz </option>
+                                        <option value="228">
+                                            Nazish Firdus </option>
+                                        <option value="234">
+                                            Hamza Inam </option>
+                                        <option value="242">
+                                            Nargis Mubeen </option>
+                                        <option value="246">
+                                            Behzad Hassan </option>
+                                        <option value="251">
+                                            Hafiz Muhammad Umar </option>
+                                        <option value="252">
+                                            Iqra Hameed </option>
+                                        <option value="255">
+                                            Muhammad Hashim </option>
+                                        <option value="257">
+                                            Muhammad Fahad Ahmed </option>
+                                        <option value="270">
+                                            Muhammad Faheem </option>
+                                        <option value="274">
+                                            Muhammad Naeem </option>
+                                        <option value="280">
+                                            Maria Shafaat </option>
+                                        <option value="284">
+                                            Naheed Gul </option>
+                                        <option value="289">
+                                            Alaya Hareem </option>
+                                        <option value="293">
+                                            Sharqa Noor </option>
+                                        <option value="294">
+                                            Hamza Usman </option>
+                                        <option value="297">
+                                            Sidra Batool </option>
+                                        <option value="300">
+                                            Burhan Ul Haq </option>
+                                        <option value="308">
+                                            Nameera Basharat </option>
+                                        <option value="309">
+                                            Ghulam Muhammad </option>
+                                        <option value="310">
+                                            Muhammad Faisal </option>
+                                        <option value="315">
+                                            Shafaqat Ali </option>
+                                        <option value="316">
+                                            Bareera Naeem </option>
+                                        <option value="317">
+                                            Kashaf ul Emaan </option>
+                                        <option value="321">
+                                            Sajjad Aslam (Eve) </option>
+                                        <option value="329">
+                                            Malika Awan </option>
+                                        <option value="330">
+                                            Muhammad Waqas Munir </option>
+                                        <option value="331">
+                                            Muhammad Rafique </option>
+                                        <option value="337">
+                                            Tanzeela Azam </option>
+                                        <option value="340">
+                                            Muhammad Ali </option>
+                                        <option value="341">
+                                            Ali Raza </option>
+                                        <option value="343">
+                                            Matin Ali Zafar </option>
+                                        <option value="346">
+                                            Sadia Khalid </option>
+                                        <option value="347">
+                                            Nimra Shafeeq </option>
+                                        <option value="349">
+                                            Muhammad Faraz Shahid </option>
+                                        <option value="350">
+                                            Asad Ullah Tariq </option>
+                                        <option value="360">
+                                            Muazzama Anwar </option>
+                                        <option value="361">
+                                            Aliza Wajid </option>
+                                        <option value="363">
+                                            Abdul Haseeb (Sr) </option>
+                                        <option value="364">
+                                            Bushra Mumtaz </option>
+                                        <option value="365">
+                                            Nargis Akhtar </option>
+                                        <option value="368">
+                                            Hafiz Saad Ayub </option>
+                                        <option value="375">
+                                            Muhammad Asif </option>
+                                        <option value="382">
+                                            Samra Tahir </option>
+                                        <option value="386">
+                                            Sonia Sana </option>
+                                        <option value="391">
+                                            Abdul Haseeb (Jun) </option>
+                                        <option value="407">
+                                            Arslan Akbar </option>
+                                        <option value="413">
+                                            Muhammad Umar (Junior) </option>
+                                        <option value="424">
+                                            Ruqia Kalsoom </option>
+                                        <option value="439">
+                                            Abdul Razzaq </option>
+                                        <option value="442">
+                                            Muhammad Bilal Haider </option>
+                                        <option value="443">
+                                            Aisha Mehmood </option>
+                                        <option value="453">
+                                            Muhammad Adil Siddique </option>
+                                        <option value="455">
+                                            Shabana Ali </option>
+                                        <option value="468">
+                                            Ahmed Meraj Qamar </option>
+                                        <option value="482">
+                                            Amna Siddique </option>
+                                        <option value="483">
+                                            Hamna Tu Zahra </option>
+                                        <option value="497">
+                                            Mehreen Zahra </option>
+                                        <option value="498">
+                                            Muhammad Khubaib </option>
+                                        <option value="501">
+                                            Muhammad Hamza Gohar </option>
+                                        <option value="507">
+                                            Muhammad Yousaf </option>
+                                        <option value="511">
+                                            Muhammad Junaid </option>
+                                        <option value="513">
+                                            Alishba imtiaz </option>
+                                        <option value="521">
+                                            Urooj </option>
+                                        <option value="524">
+                                            Adil Ali </option>
+                                        <option value="526">
+                                            Zillabeed Maqbool </option>
+                                        <option value="536">
+                                            Kaneez Fatima </option>
+                                        <option value="537">
+                                            Raheela Shahid </option>
+                                        <option value="538">
+                                            Muhammad Yaseen3 </option>
+                                        <option value="539">
+                                            Kiran Naz </option>
+                                        <option value="542">
+                                            Usama Zafar </option>
+                                        <option value="544">
+                                            Syed Abdul Qadir </option>
+                                        <option value="546">
+                                            Malaika Imtiaz </option>
+                                        <option value="547">
+                                            Muhammad Usama </option>
+                                        <option value="558">
+                                            Areeba Kalim </option>
+                                        <option value="560">
+                                            Shayan Tahir </option>
+                                        <option value="564">
+                                            M Faizan Ali </option>
+                                        <option value="566">
+                                            Maryam Malik </option>
+                                        <option value="567">
+                                            Famiya Maryam </option>
+                                        <option value="572">
+                                            Muhammad Abu Huraira </option>
+                                        <option value="576">
+                                            Aliha Habib </option>
+                                        <option value="581">
+                                            Yusra Ayub </option>
+                                        <option value="583">
+                                            Bareera Nawaz </option>
+                                        <option value="597">
+                                            Muhammad Mustaqeem </option>
+                                        <option value="598">
+                                            Hafiz M Shoaib Zafar </option>
+                                        <option value="599">
+                                            Muhammad Mohsin </option>
+                                        <option value="606">
+                                            Jawad Hassan </option>
+                                        <option value="607">
+                                            Muhammad Saifullah </option>
+                                        <option value="608">
+                                            Hafsa Rani </option>
+                                        <option value="610">
+                                            Laiba Naveed </option>
+                                        <option value="614">
+                                            Haseeb Ashraf </option>
+                                        <option value="615">
+                                            Ahmed Ali Khan </option>
+                                        <option value="616">
+                                            Maria Sana </option>
+                                        <option value="620">
+                                            Zoya Toqeer </option>
+                                        <option value="627">
+                                            Hafiz Usman Ali </option>
+                                        <option value="632">
+                                            Minal Asad </option>
+                                        <option value="633">
+                                            Hafiz Muhammad Touseef Zafer </option>
+                                        <option value="634">
+                                            Bisma Rafaqat </option>
+                                        <option value="638">
+                                            Hira Iqbal </option>
+                                        <option value="639">
+                                            Sundas Saleem </option>
+                                        <option value="641">
+                                            Muhammad Tayyab </option>
+                                        <option value="642">
+                                            Hassaan Asghar </option>
+                                        <option value="644">
+                                            Hafiza Azka Arshad </option>
+                                        <option value="645">
+                                            Ehtisham ul Haq </option>
+                                        <option value="646">
+                                            Alishba Amjad </option>
+                                        <option value="647">
+                                            Muhammad Hamza Nadeem </option>
+                                        <option value="648">
+                                            Muhammad Hashir Bin Imran </option>
+                                        <option value="649">
+                                            Ayesha Rani </option>
+                                        <option value="651">
+                                            Najeeb Mujtaba </option>
+                                        <option value="654">
+                                            Hassan Jaleel </option>
+                                        <option value="655">
+                                            Muhammad Hassan </option>
+                                        <option value="656">
+                                            Ayesha Fazal </option>
+                                        <option value="658">
+                                            Ayesha Nawab </option>
+                                        <option value="659">
+                                            Rana Anwar Ali </option>
+                                        <option value="661">
+                                            Faika Fakhar </option>
+                                        <option value="662">
+                                            Muhammad Abdullah </option>
+                                        <option value="663">
+                                            Muhammad Awab </option>
+                                        <option value="664">
+                                            Muhammad Mohsin Ali </option>
+                                        <option value="666">
+                                            Andleeb Usman </option>
+                                        <option value="667">
+                                            Hamza Ayub </option>
+                                        <option value="668">
+                                            M Umer Farooq </option>
+                                        <option value="669">
+                                            Qazi Ghulam Yazdani </option>
+                                        <option value="670">
+                                            Muhammad Hassnain </option>
+                                        <option value="671">
+                                            Ameer Hamza </option>
+                                        <option value="674">
+                                            Ali Haider </option>
+                                        <option value="675">
+                                            Qurat ul ain Tariq </option>
+                                        <option value="676">
+                                            Laiba Anwar </option>
+                                        <option value="677">
+                                            Amna Masood </option>
+                                        <option value="678">
+                                            Mehreen Qudoos </option>
+                                        <option value="679">
+                                            Muhammad Usman </option>
+                                        <option value="680">
+                                            Areeb Abdullah </option>
+                                        <option value="681">
+                                            M Sohaib Hassan </option>
+                                        <option value="682">
+                                            Sumama Bin Qasim </option>
+                                        <option value="683">
+                                            Aqsa Awan </option>
+                                        <option value="684">
+                                            Noor ul Ain </option>
+                                        <option value="685">
+                                            Hafiza Aleeza Malik </option>
+                                        <option value="686">
+                                            Sabih ur Rehman </option>
+                                        <option value="687">
+                                            Haji Shoaib </option>
+                                        <option value="688">
+                                            Ghulam Dastagir </option>
+                                        <option value="689">
+                                            Meerab Abid </option>
+                                        <option value="690">
+                                            Manahil Shahbaz </option>
+                                        <option value="691">
+                                            Khadija Amir </option>
+                                        <option value="692">
+                                            Tanzeela Kouser </option>
+                                        <option value="693">
+                                            Shams Haider </option>
+                                        <option value="694">
+                                            Muhammad Hasnain (Jr) </option>
+                                        <option value="695">
+                                            Ubaid Ullah Tahir </option>
+                                        <option value="696">
+                                            Fareeha Arshad </option>
+                                        <option value="697">
+                                            Hamza Ismaeel </option>
+                                        <option value="698">
+                                            Saria Nadeem </option>
+                                        <option value="700">
+                                            Muhammad Awon </option>
+                                        <option value="701">
+                                            Abdul Basit </option>
+                                        <option value="702">
+                                            Muhammad Shahbaz Iqbal </option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            <!-- Date -->
+                            <div class="col-md-6">
+                                <label class="fw-semibold fs-6 mb-3">
+                                    Allocation Date
+                                </label>
+                                <div class="position-relative">
+                                    <i
+                                        class="ki-outline ki-calendar fs-2 position-absolute top-50 translate-middle-y ms-4 text-gray-500"></i>
+                                    <input type="date" class="form-control form-control-solid ps-12" name="date"
+                                        value="2026-06-17" readonly>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Footer -->
+                    <div class="modal-footer border-0 px-10 pb-8 pt-0">
+                        <button type="button" class="btn btn-light me-3" data-bs-dismiss="modal">
+                            Cancel
+                        </button>
+                        <button type="submit" class="btn btn-success">
+                            <i class="ki-outline ki-check fs-5 me-1"></i>
+                            Save Allocation
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- END :: ASSIGN TEACHER MODAL -->
+    <!--begin::Shift Class Modal Manager/Senior Manager-->
+    <div class="modal fade" id="shiftModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-4 shadow border-0 overflow-hidden">
+                <!--begin::Header-->
+                <div class="modal-header border-0 bg-light-primary py-5 px-8">
+                    <div class="d-flex align-items-center">
+                        <div class="symbol symbol-50px me-4">
+                            <span class="symbol-label bg-primary">
+                                <i class="ki-outline ki-calendar-edit text-white fs-2"></i>
+                            </span>
+                        </div>
+                        <div>
+                            <h2 class="fw-bold text-gray-900 mb-1">
+                                Shift Class
+                            </h2>
+                            <div class="text-muted fw-semibold fs-7">
+                                Update teacher and available class timing
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-icon btn-sm btn-light-danger rounded-circle"
+                        data-bs-dismiss="modal">
+                        <i class="ki-outline ki-cross fs-2"></i>
+                    </button>
+                </div>
+                <!--end::Header-->
+                <!--begin::Form-->
+                <form action="class-shift.php" method="get" id="classShiftForm">
+                    <!--begin::Body-->
+                    <div class="modal-body px-10 py-8">
+                        <div class="row g-8">
+                            <!-- Teacher -->
+                            <div class="col-lg-6">
+                                <label class="form-label fw-bold text-gray-700 mb-3">
+                                    <i class="ki-outline ki-teacher fs-5 text-primary me-2"></i>
+                                    Select Teacher
+                                </label>
+                                <select class="form-select form-select-solid" data-control="select2"
+                                    data-dropdown-parent="#shiftModal" data-placeholder="Select Teacher" name="tid"
+                                    id="shiftTeacher" required>
+                                    <option value=""></option>
+                                    <option value="701">
+                                        Abdul Basit (701)
+                                    </option>
+                                    <option value="391">
+                                        Abdul Haseeb (Jun) (391)
+                                    </option>
+                                    <option value="363">
+                                        Abdul Haseeb (Sr) (363)
+                                    </option>
+                                    <option value="439">
+                                        Abdul Razzaq (439)
+                                    </option>
+                                    <option value="173">
+                                        Adeel Shah (173)
+                                    </option>
+                                    <option value="524">
+                                        Adil Ali (524)
+                                    </option>
+                                    <option value="92">
+                                        Adil Tahawar (92)
+                                    </option>
+                                    <option value="615">
+                                        Ahmed Ali Khan (615)
+                                    </option>
+                                    <option value="468">
+                                        Ahmed Meraj Qamar (468)
+                                    </option>
+                                    <option value="443">
+                                        Aisha Mehmood (443)
+                                    </option>
+                                    <option value="289">
+                                        Alaya Hareem (289)
+                                    </option>
+                                    <option value="674">
+                                        Ali Haider (674)
+                                    </option>
+                                    <option value="341">
+                                        Ali Raza (341)
+                                    </option>
+                                    <option value="576">
+                                        Aliha Habib (576)
+                                    </option>
+                                    <option value="646">
+                                        Alishba Amjad (646)
+                                    </option>
+                                    <option value="513">
+                                        Alishba imtiaz (513)
+                                    </option>
+                                    <option value="361">
+                                        Aliza Wajid (361)
+                                    </option>
+                                    <option value="671">
+                                        Ameer Hamza (671)
+                                    </option>
+                                    <option value="192">
+                                        Amna Ayoub (192)
+                                    </option>
+                                    <option value="677">
+                                        Amna Masood (677)
+                                    </option>
+                                    <option value="224">
+                                        Amna Nawaz (224)
+                                    </option>
+                                    <option value="482">
+                                        Amna Siddique (482)
+                                    </option>
+                                    <option value="666">
+                                        Andleeb Usman (666)
+                                    </option>
+                                    <option value="683">
+                                        Aqsa Awan (683)
+                                    </option>
+                                    <option value="680">
+                                        Areeb Abdullah (680)
+                                    </option>
+                                    <option value="558">
+                                        Areeba Kalim (558)
+                                    </option>
+                                    <option value="407">
+                                        Arslan Akbar (407)
+                                    </option>
+                                    <option value="350">
+                                        Asad Ullah Tariq (350)
+                                    </option>
+                                    <option value="656">
+                                        Ayesha Fazal (656)
+                                    </option>
+                                    <option value="658">
+                                        Ayesha Nawab (658)
+                                    </option>
+                                    <option value="649">
+                                        Ayesha Rani (649)
+                                    </option>
+                                    <option value="316">
+                                        Bareera Naeem (316)
+                                    </option>
+                                    <option value="583">
+                                        Bareera Nawaz (583)
+                                    </option>
+                                    <option value="246">
+                                        Behzad Hassan (246)
+                                    </option>
+                                    <option value="634">
+                                        Bisma Rafaqat (634)
+                                    </option>
+                                    <option value="300">
+                                        Burhan Ul Haq (300)
+                                    </option>
+                                    <option value="364">
+                                        Bushra Mumtaz (364)
+                                    </option>
+                                    <option value="645">
+                                        Ehtisham ul Haq (645)
+                                    </option>
+                                    <option value="661">
+                                        Faika Fakhar (661)
+                                    </option>
+                                    <option value="219">
+                                        Faizan Muhammad (219)
+                                    </option>
+                                    <option value="567">
+                                        Famiya Maryam (567)
+                                    </option>
+                                    <option value="696">
+                                        Fareeha Arshad (696)
+                                    </option>
+                                    <option value="688">
+                                        Ghulam Dastagir (688)
+                                    </option>
+                                    <option value="309">
+                                        Ghulam Muhammad (309)
+                                    </option>
+                                    <option value="598">
+                                        Hafiz M Shoaib Zafar (598)
+                                    </option>
+                                    <option value="633">
+                                        Hafiz Muhammad Touseef Zafer (633)
+                                    </option>
+                                    <option value="251">
+                                        Hafiz Muhammad Umar (251)
+                                    </option>
+                                    <option value="110">
+                                        Hafiz Muhammad Usman (110)
+                                    </option>
+                                    <option value="368">
+                                        Hafiz Saad Ayub (368)
+                                    </option>
+                                    <option value="627">
+                                        Hafiz Usman Ali (627)
+                                    </option>
+                                    <option value="685">
+                                        Hafiza Aleeza Malik (685)
+                                    </option>
+                                    <option value="644">
+                                        Hafiza Azka Arshad (644)
+                                    </option>
+                                    <option value="4">
+                                        Hafiza Maryam Bibi (4)
+                                    </option>
+                                    <option value="608">
+                                        Hafsa Rani (608)
+                                    </option>
+                                    <option value="687">
+                                        Haji Shoaib (687)
+                                    </option>
+                                    <option value="483">
+                                        Hamna Tu Zahra (483)
+                                    </option>
+                                    <option value="667">
+                                        Hamza Ayub (667)
+                                    </option>
+                                    <option value="234">
+                                        Hamza Inam (234)
+                                    </option>
+                                    <option value="697">
+                                        Hamza Ismaeel (697)
+                                    </option>
+                                    <option value="75">
+                                        Hamza Kanwal (75)
+                                    </option>
+                                    <option value="294">
+                                        Hamza Usman (294)
+                                    </option>
+                                    <option value="614">
+                                        Haseeb Ashraf (614)
+                                    </option>
+                                    <option value="642">
+                                        Hassaan Asghar (642)
+                                    </option>
+                                    <option value="654">
+                                        Hassan Jaleel (654)
+                                    </option>
+                                    <option value="638">
+                                        Hira Iqbal (638)
+                                    </option>
+                                    <option value="167">
+                                        Iqra Awan (167)
+                                    </option>
+                                    <option value="252">
+                                        Iqra Hameed (252)
+                                    </option>
+                                    <option value="606">
+                                        Jawad Hassan (606)
+                                    </option>
+                                    <option value="536">
+                                        Kaneez Fatima (536)
+                                    </option>
+                                    <option value="317">
+                                        Kashaf ul Emaan (317)
+                                    </option>
+                                    <option value="691">
+                                        Khadija Amir (691)
+                                    </option>
+                                    <option value="140">
+                                        Khadija Mushtaq (140)
+                                    </option>
+                                    <option value="539">
+                                        Kiran Naz (539)
+                                    </option>
+                                    <option value="676">
+                                        Laiba Anwar (676)
+                                    </option>
+                                    <option value="610">
+                                        Laiba Naveed (610)
+                                    </option>
+                                    <option value="564">
+                                        M Faizan Ali (564)
+                                    </option>
+                                    <option value="681">
+                                        M Sohaib Hassan (681)
+                                    </option>
+                                    <option value="668">
+                                        M Umer Farooq (668)
+                                    </option>
+                                    <option value="546">
+                                        Malaika Imtiaz (546)
+                                    </option>
+                                    <option value="329">
+                                        Malika Awan (329)
+                                    </option>
+                                    <option value="690">
+                                        Manahil Shahbaz (690)
+                                    </option>
+                                    <option value="616">
+                                        Maria Sana (616)
+                                    </option>
+                                    <option value="280">
+                                        Maria Shafaat (280)
+                                    </option>
+                                    <option value="566">
+                                        Maryam Malik (566)
+                                    </option>
+                                    <option value="343">
+                                        Matin Ali Zafar (343)
+                                    </option>
+                                    <option value="689">
+                                        Meerab Abid (689)
+                                    </option>
+                                    <option value="678">
+                                        Mehreen Qudoos (678)
+                                    </option>
+                                    <option value="497">
+                                        Mehreen Zahra (497)
+                                    </option>
+                                    <option value="632">
+                                        Minal Asad (632)
+                                    </option>
+                                    <option value="117">
+                                        Mohsin Ali (117)
+                                    </option>
+                                    <option value="360">
+                                        Muazzama Anwar (360)
+                                    </option>
+                                    <option value="662">
+                                        Muhammad Abdullah (662)
+                                    </option>
+                                    <option value="572">
+                                        Muhammad Abu Huraira (572)
+                                    </option>
+                                    <option value="194">
+                                        Muhammad Abubakar Saqib (194)
+                                    </option>
+                                    <option value="453">
+                                        Muhammad Adil Siddique (453)
+                                    </option>
+                                    <option value="213">
+                                        Muhammad Ahmad (213)
+                                    </option>
+                                    <option value="340">
+                                        Muhammad Ali (340)
+                                    </option>
+                                    <option value="199">
+                                        Muhammad Aneeb Akhtar (199)
+                                    </option>
+                                    <option value="375">
+                                        Muhammad Asif (375)
+                                    </option>
+                                    <option value="663">
+                                        Muhammad Awab (663)
+                                    </option>
+                                    <option value="700">
+                                        Muhammad Awon (700)
+                                    </option>
+                                    <option value="442">
+                                        Muhammad Bilal Haider (442)
+                                    </option>
+                                    <option value="257">
+                                        Muhammad Fahad Ahmed (257)
+                                    </option>
+                                    <option value="270">
+                                        Muhammad Faheem (270)
+                                    </option>
+                                    <option value="310">
+                                        Muhammad Faisal (310)
+                                    </option>
+                                    <option value="349">
+                                        Muhammad Faraz Shahid (349)
+                                    </option>
+                                    <option value="501">
+                                        Muhammad Hamza Gohar (501)
+                                    </option>
+                                    <option value="647">
+                                        Muhammad Hamza Nadeem (647)
+                                    </option>
+                                    <option value="255">
+                                        Muhammad Hashim (255)
+                                    </option>
+                                    <option value="648">
+                                        Muhammad Hashir Bin Imran (648)
+                                    </option>
+                                    <option value="694">
+                                        Muhammad Hasnain (Jr) (694)
+                                    </option>
+                                    <option value="655">
+                                        Muhammad Hassan (655)
+                                    </option>
+                                    <option value="670">
+                                        Muhammad Hassnain (670)
+                                    </option>
+                                    <option value="511">
+                                        Muhammad Junaid (511)
+                                    </option>
+                                    <option value="498">
+                                        Muhammad Khubaib (498)
+                                    </option>
+                                    <option value="599">
+                                        Muhammad Mohsin (599)
+                                    </option>
+                                    <option value="664">
+                                        Muhammad Mohsin Ali (664)
+                                    </option>
+                                    <option value="597">
+                                        Muhammad Mustaqeem (597)
+                                    </option>
+                                    <option value="274">
+                                        Muhammad Naeem (274)
+                                    </option>
+                                    <option value="331">
+                                        Muhammad Rafique (331)
+                                    </option>
+                                    <option value="607">
+                                        Muhammad Saifullah (607)
+                                    </option>
+                                    <option value="702">
+                                        Muhammad Shahbaz Iqbal (702)
+                                    </option>
+                                    <option value="71">
+                                        Muhammad Shahzad (71)
+                                    </option>
+                                    <option value="641">
+                                        Muhammad Tayyab (641)
+                                    </option>
+                                    <option value="413">
+                                        Muhammad Umar (Junior) (413)
+                                    </option>
+                                    <option value="547">
+                                        Muhammad Usama (547)
+                                    </option>
+                                    <option value="679">
+                                        Muhammad Usman (679)
+                                    </option>
+                                    <option value="330">
+                                        Muhammad Waqas Munir (330)
+                                    </option>
+                                    <option value="538">
+                                        Muhammad Yaseen3 (538)
+                                    </option>
+                                    <option value="507">
+                                        Muhammad Yousaf (507)
+                                    </option>
+                                    <option value="187">
+                                        Muhammad Zahid Razzaq (187)
+                                    </option>
+                                    <option value="12">
+                                        Muhammad Zain ul Abideen (12)
+                                    </option>
+                                    <option value="284">
+                                        Naheed Gul (284)
+                                    </option>
+                                    <option value="651">
+                                        Najeeb Mujtaba (651)
+                                    </option>
+                                    <option value="308">
+                                        Nameera Basharat (308)
+                                    </option>
+                                    <option value="365">
+                                        Nargis Akhtar (365)
+                                    </option>
+                                    <option value="242">
+                                        Nargis Mubeen (242)
+                                    </option>
+                                    <option value="228">
+                                        Nazish Firdus (228)
+                                    </option>
+                                    <option value="347">
+                                        Nimra Shafeeq (347)
+                                    </option>
+                                    <option value="684">
+                                        Noor ul Ain (684)
+                                    </option>
+                                    <option value="669">
+                                        Qazi Ghulam Yazdani (669)
+                                    </option>
+                                    <option value="675">
+                                        Qurat ul ain Tariq (675)
+                                    </option>
+                                    <option value="537">
+                                        Raheela Shahid (537)
+                                    </option>
+                                    <option value="659">
+                                        Rana Anwar Ali (659)
+                                    </option>
+                                    <option value="40">
+                                        Rashida Khanam (40)
+                                    </option>
+                                    <option value="424">
+                                        Ruqia Kalsoom (424)
+                                    </option>
+                                    <option value="686">
+                                        Sabih ur Rehman (686)
+                                    </option>
+                                    <option value="346">
+                                        Sadia Khalid (346)
+                                    </option>
+                                    <option value="321">
+                                        Sajjad Aslam (Eve) (321)
+                                    </option>
+                                    <option value="105">
+                                        Saleem Ullah (105)
+                                    </option>
+                                    <option value="382">
+                                        Samra Tahir (382)
+                                    </option>
+                                    <option value="698">
+                                        Saria Nadeem (698)
+                                    </option>
+                                    <option value="455">
+                                        Shabana Ali (455)
+                                    </option>
+                                    <option value="315">
+                                        Shafaqat Ali (315)
+                                    </option>
+                                    <option value="693">
+                                        Shams Haider (693)
+                                    </option>
+                                    <option value="293">
+                                        Sharqa Noor (293)
+                                    </option>
+                                    <option value="560">
+                                        Shayan Tahir (560)
+                                    </option>
+                                    <option value="297">
+                                        Sidra Batool (297)
+                                    </option>
+                                    <option value="386">
+                                        Sonia Sana (386)
+                                    </option>
+                                    <option value="682">
+                                        Sumama Bin Qasim (682)
+                                    </option>
+                                    <option value="210">
+                                        Summaya Shafaat (210)
+                                    </option>
+                                    <option value="639">
+                                        Sundas Saleem (639)
+                                    </option>
+                                    <option value="544">
+                                        Syed Abdul Qadir (544)
+                                    </option>
+                                    <option value="79">
+                                        Talat Hussain Shah (79)
+                                    </option>
+                                    <option value="153">
+                                        Talha Shah (153)
+                                    </option>
+                                    <option value="337">
+                                        Tanzeela Azam (337)
+                                    </option>
+                                    <option value="692">
+                                        Tanzeela Kouser (692)
+                                    </option>
+                                    <option value="202">
+                                        Tooba Waheed (202)
+                                    </option>
+                                    <option value="695">
+                                        Ubaid Ullah Tahir (695)
+                                    </option>
+                                    <option value="521">
+                                        Urooj (521)
+                                    </option>
+                                    <option value="542">
+                                        Usama Zafar (542)
+                                    </option>
+                                    <option value="23">
+                                        Waseem Hassan (23)
+                                    </option>
+                                    <option value="581">
+                                        Yusra Ayub (581)
+                                    </option>
+                                    <option value="80">
+                                        Zeeshan Qasim (80)
+                                    </option>
+                                    <option value="526">
+                                        Zillabeed Maqbool (526)
+                                    </option>
+                                    <option value="620">
+                                        Zoya Toqeer (620)
+                                    </option>
+                                    <option value="129">
+                                        Zubair Aslam (129)
+                                    </option>
+                                </select>
+                            </div>
+                            <!-- Time -->
+                            <div class="col-lg-6">
+                                <label class="form-label fw-bold text-gray-700 mb-3">
+                                    <i class="ki-outline ki-time fs-5 text-info me-2"></i>
+                                    Select Available Time
+                                </label>
+                                <select class="form-select form-select-solid" data-control="select2"
+                                    data-dropdown-parent="#shiftModal" data-placeholder="Select Time" name="time_id"
+                                    id="shiftTime" required>
+                                    <option value="">
+                                        First Select Teacher
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Hidden Fields -->
+                        <input type="hidden" name="hid" id="shiftHid">
+                        <input type="hidden" name="date" id="shiftDate" value="<br />
+<b>Warning</b>: Undefined variable $date_id in <b>/home/learnq5/portal/employees/includes/modals.php</b> on line <b>728</b><br />
+<br />
+<b>Deprecated</b>: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in <b>/home/learnq5/portal/employees/includes/modals.php</b> on line <b>728</b><br />
+">
+                    </div>
+                    <!--end::Body-->
+                    <!--begin::Footer-->
+                    <div class="modal-footer border-0 px-10 pb-8">
+                        <button type="button" class="btn btn-light-danger fw-bold" data-bs-dismiss="modal">
+                            <i class="ki-outline ki-cross-circle fs-4 me-1"></i>
+                            Cancel
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="ki-outline ki-check-circle fs-4 me-1"></i>
+                            Save Changes
+                        </button>
+                    </div>
+                    <!--end::Footer-->
+                </form>
+                <!--end::Form-->
+            </div>
+        </div>
+    </div>
+    <!--end::Shift Modal--><!--begin::Footer-->
+    <div id="kt_app_footer" class="app-footer border-top">
+        <div
+            class="app-container container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between py-4">
+            <!-- LEFT -->
+            <div class="d-flex flex-column flex-md-row align-items-center gap-2 order-2 order-md-1">
+                <!-- COPYRIGHT -->
+                <div class="text-gray-600 fs-7">
+                    <span class="fw-semibold">2026 &copy;</span>
+                    <a href="#" class="text-gray-800 text-hover-primary fw-bold ms-1">
+                        Learn Quran Online Academy
+                    </a>
+                </div>
+                <!-- MENU -->
+                <ul class="menu menu-gray-600 menu-hover-primary fw-semibold fs-7">
+                    <li class="menu-item">
+                        <a href="https://learnquraan.co.uk/about.php" target="_blank" class="menu-link px-2">
+                            About
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="https://learnquraan.co.uk/blog-list.php" target="_blank" class="menu-link px-2">
+                            Blogs
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- RIGHT (SOCIAL ICONS) -->
+            <div class="d-flex align-items-center gap-3 order-1 order-md-2">
+                <span class="badge badge-light-info fw-bold px-3 py-2" data-bs-toggle="tooltip"
+                    title="Detected current IP and device for troubleshooting">
+                    <i class="ki-outline ki-shield-tick fs-6 me-1"></i>
+                    IP: 115.186.161.76 | Desktop </span>
+                <!-- YouTube -->
+                <a href="https://www.youtube.com/channel/UCfRDyqC9BRaxDtDOhfaCHQA/about" target="_blank"
+                    rel="noopener noreferrer" class="symbol symbol-circle symbol-45px bg-light me-3 social-hover"
+                    data-bs-toggle="tooltip" title="YouTube">
+                    <img alt="YouTube" src="../assets/media/svg/brand-logos/youtube-3.svg" class="p-3" />
+                </a>
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/learnquraanacademy/" target="_blank" rel="noopener noreferrer"
+                    class="symbol symbol-circle symbol-45px bg-light me-3 social-hover" data-bs-toggle="tooltip"
+                    title="Facebook">
+                    <img alt="Facebook" src="../assets/media/svg/brand-logos/facebook-3.svg" class="p-3" />
+                </a>
+                <!-- Twitter / X -->
+                <a href="https://x.com/learnquraan" target="_blank" rel="noopener noreferrer"
+                    class="symbol symbol-circle symbol-45px bg-light social-hover" data-bs-toggle="tooltip"
+                    title="Twitter">
+                    <img alt="Twitter" src="../assets/media/svg/brand-logos/twitter.svg" class="p-3" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--end::Footer-->
+    <!--begin::Scrolltop-->
+    <div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">
+        <i class="ki-outline ki-arrow-up"></i>
+    </div>
+    <!--end::Scrolltop-->
+    <!--begin::Javascript-->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script>var hostUrl = "/../assets/";</script>
+    <!--begin::Global Javascript Bundle(mandatory for all pages)-->
+    <script src="../assets/plugins/global/plugins.bundle.js"></script>
+    <script src="../assets/js/scripts.bundle.js"></script>
+    <!--end::Global Javascript Bundle-->
+    <!--begin::Vendors Javascript(used for this page only)-->
+    <script src="../assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/continentsLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/usaLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZonesLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZoneAreasLow.js"></script>
+    <!--end::Vendors Javascript-->
+    <!--begin::Custom Javascript(used for this page only)-->
+    <script src="../assets/js/widgets.bundle.js"></script>
+    <script src="../assets/js/custom/widgets.js"></script>
+    <script src="../assets/js/custom/apps/chat/chat.js"></script>
+    <script src="../assets/js/custom/utilities/modals/upgrade-plan.js"></script>
+    <script src="../assets/js/custom/utilities/modals/create-campaign.js"></script>
+    <script src="../assets/plugins/custom/datatables/datatables.bundle.js"></script>
+    <script src="../assets/js/custom/apps/customers/list/export.js"></script>
+    <script src="../assets/js/custom/apps/customers/list/list.js"></script>
+    <script src="../assets/js/custom/apps/customers/add.js"></script>
+    <script>
+        "use strict";
+        var KTDatatableExample = function () {
+            var table;
+            var initDatatable = function () {
+                table = $('#kt_datatable_responsive').DataTable({
+                    responsive: true,
+                    pageLength: 50,
+                    ordering: true,
+                    searching: true,
+                    lengthChange: true,
+                    info: true,
+                    columnDefs: [
+                        { orderable: false, targets: [] } // disable if needed
+                    ]
+                });
+            }
+            return {
+                init: function () {
+                    initDatatable();
+                }
+            };
+        }();
+        KTUtil.onDOMContentLoaded(function () {
+            KTDatatableExample.init();
+        });
+    </script>
+    <script>
+        function loadChapterHistory(sid, type) {
+            const loader = document.getElementById('chapterLoader');
+            const table = document.getElementById('chapterData');
+            const wrap = document.getElementById('chapterTableWrapper');
+            loader.classList.remove('d-none');
+            wrap.classList.add('d-none');
+            table.innerHTML = '';
+            fetch(`chapter_history.php?sid=${sid}&type=${type}`)
+                .then(res => res.text())
+                .then(data => {
+                    table.innerHTML = data;
+                    loader.classList.add('d-none');
+                    wrap.classList.remove('d-none');
+                })
+                .catch(() => {
+                    table.innerHTML = "<tr><td colspan='6' class='text-danger text-center'>Error loading data</td></tr>";
+                    loader.classList.add('d-none');
+                    wrap.classList.remove('d-none');
+                });
+        }
+    </script>
+    <script>
+        let currentDate = new Date();
+        let currentSid = 0;
+        function formatMonth(date) {
+            return date.toLocaleString('default', { month: 'long', year: 'numeric' });
+        }
+        function openHistoryModal(sid) {
+            currentSid = sid;
+            currentDate = new Date(); // reset to current
+            loadHistory();
+        }
+        function changeMonth(step) {
+            currentDate.setMonth(currentDate.getMonth() + step);
+            loadHistory();
+        }
+        function loadHistory() {
+            const loader = document.getElementById("historyLoader");
+            const data = document.getElementById("historyData");
+            const title = document.getElementById("historyMonth");
+            loader.classList.remove("d-none");
+            data.classList.add("d-none");
+            title.innerText = formatMonth(currentDate);
+            let month = currentDate.getMonth() + 1;
+            let year = currentDate.getFullYear();
+            fetch(`class_history.php?sid=${currentSid}&month=${month}&year=${year}`)
+                .then(res => res.text())
+                .then(html => {
+                    data.innerHTML = html;
+                })
+                .catch(() => {
+                    data.innerHTML = "<div class='text-danger text-center'>Error loading data</div>";
+                })
+                .finally(() => {
+                    loader.classList.add("d-none");
+                    data.classList.remove("d-none");
+                });
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let scheduleModal = document.getElementById('scheduleModal');
+            scheduleModal.addEventListener('show.bs.modal', function (event) {
+                let button = event.relatedTarget;
+                let teacherId = button.getAttribute('data-id');
+                let content = document.getElementById('scheduleContent');
+                // Show loader
+                content.innerHTML = `
+<div class="text-center py-10">
+<span class="spinner-border text-primary"></span>
+</div>
+`;
+                // Fetch data
+                fetch("get_schedule.php?tid=" + teacherId)
+                    .then(response => response.text())
+                    .then(data => {
+                        content.innerHTML = data;
+                    })
+                    .catch(error => {
+                        content.innerHTML = "<div class='text-danger'>Error loading schedule</div>";
+                        console.error(error);
+                    });
+            });
+        });
+    </script>
+    <!-- Reschual Pending Script -->
+    <script>
+        $('#rescheduleListModal').on('show.bs.modal', function () {
+            $('#rescheduleLoader').removeClass('d-none');
+            $('#rescheduleContent').addClass('d-none');
+            $.ajax({
+                url: 'reschedule-pending.php',
+                method: 'GET',
+                success: function (response) {
+                    $('#rescheduleContent').html(response);
+                    $('#rescheduleLoader').addClass('d-none');
+                    $('#rescheduleContent').removeClass('d-none');
+                },
+                error: function () {
+                    $('#rescheduleLoader').html('<div class="text-danger">Failed to load data</div>');
+                }
+            });
+        });
+    </script>
+    <!-- Student Leave Script -->
+    <script>
+        $('#leaveModal').on('show.bs.modal', function () {
+            $('#leaveLoader').removeClass('d-none');
+            $('#leaveContent').addClass('d-none');
+            $.ajax({
+                url: 'student-list-leave.php',
+                method: 'GET',
+                success: function (response) {
+                    $('#leaveContent').html(response);
+                    $('#leaveLoader').addClass('d-none');
+                    $('#leaveContent').removeClass('d-none');
+                },
+                error: function () {
+                    $('#leaveLoader').html('<div class="text-danger">Failed to load data</div>');
+                }
+            });
+        });
+    </script>
+    <script>
+        function loadStudentScheduleModal(sid, tid) {
+            const modalContent = document.getElementById("modal-schedule-content");
+
+            if (!modalContent || !sid || !tid) {
+                return;
+            }
+
+            modalContent.dataset.sid = sid;
+            modalContent.dataset.tid = tid;
+            modalContent.innerHTML = `
+<div class="text-center py-5">
+<span class="spinner-border text-primary"></span>
+</div>
+`;
+
+            fetch("student-schedule.php", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                    "X-Requested-With": "XMLHttpRequest"
+                },
+                body: `sid=${encodeURIComponent(sid)}&tid=${encodeURIComponent(tid)}`
+            })
+                .then(res => res.text())
+                .then(data => {
+                    modalContent.innerHTML = data;
+                })
+                .catch(err => {
+                    modalContent.innerHTML = `
+<div class="text-danger text-center">
+Error loading schedule
+</div>
+`;
+                    console.error(err);
+                });
+        }
+
+        document.addEventListener("click", function (e) {
+            const scheduleLink = e.target.closest(".view-schedule-link");
+
+            if (scheduleLink) {
+                loadStudentScheduleModal(scheduleLink.dataset.sid, scheduleLink.dataset.tid);
+                return;
+            }
+
+            const deleteLink = e.target.closest("[data-schedule-delete], [data-schedule-delete-all]");
+
+            if (!deleteLink) {
+                return;
+            }
+
+            e.preventDefault();
+            e.stopPropagation();
+
+            const message = deleteLink.dataset.scheduleDeleteAll
+                ? "Are you sure you want to delete all schedules for this student and teacher?"
+                : "Delete this schedule time?";
+
+            if (!confirm(message)) {
+                return;
+            }
+
+            deleteLink.classList.add("disabled");
+            deleteLink.setAttribute("aria-disabled", "true");
+
+            fetch(deleteLink.href, {
+                headers: {
+                    "X-Requested-With": "XMLHttpRequest"
+                }
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (!data.success) {
+                        throw new Error(data.message || "Unable to delete schedule.");
+                    }
+
+                    loadStudentScheduleModal(deleteLink.dataset.sid, deleteLink.dataset.tid);
+                })
+                .catch(err => {
+                    alert(err.message || "Unable to delete schedule.");
+                    deleteLink.classList.remove("disabled");
+                    deleteLink.removeAttribute("aria-disabled");
+                    console.error(err);
+                });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const ageModal = document.getElementById('ageModal');
+            if (!ageModal) return;
+            ageModal.addEventListener('show.bs.modal', function (event) {
+                let button = event.relatedTarget;
+                if (!button) return;
+                // ✅ Get values from button
+                let studentId = button.getAttribute('data-id');
+                let birthYear = button.getAttribute('data-birth_year');
+                // ✅ Set hidden input
+                document.getElementById('modalStudentId').value = studentId;
+                // ✅ Set dropdown value
+                let yearSelect = document.getElementById('modalBirthYear');
+                if (yearSelect && birthYear) {
+                    yearSelect.value = birthYear;
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            // Initialize Select2 for the modal
+            $('#newtime').select2({
+                dropdownParent: $('#reScheduleModal'),
+                placeholder: 'Select a time',
+                allowClear: true,
+            });
+            // Reinitialize Select2 when modal is shown
+            $('#reScheduleModal').on('shown.bs.modal', function () {
+                $('#newtime').select2({
+                    dropdownParent: $('#reScheduleModal'),
+                });
+            });
+            // Populate hidden fields when the modal is triggered
+            $('#reScheduleModal').on('show.bs.modal', function (event) {
+                const data = event.relatedTarget.dataset;
+                $('#modalPid').val(data.pid);
+                $('#modalStudentId').val(data.sid);
+                $('#modalTeacherId').val(data.tid);
+                $('#modalDeptId').val(data.dept);
+                $('#modalAdeptId').val(data.adept);
+                $('#modalOriDate').val(data.oriDate);
+                $('#modalHistoryId').val(data.historyId);
+                $('#modalOriStatus').val(data.oriStatus);
+                $('#modalRestatus').val(data.restatus);
+                $('#modalRate').val(data.rate);
+            });
+        });
+    </script>
+    <!-- Advance Reschedule -->
+    <script>
+        $(document).ready(function () {
+            // ✅ Get today's date (YYYY-MM-DD)
+            function getTodayDate() {
+                let today = new Date();
+                let y = today.getFullYear();
+                let m = String(today.getMonth() + 1).padStart(2, '0');
+                let d = String(today.getDate()).padStart(2, '0');
+                return `${y}-${m}-${d}`;
+            }
+            // ✅ Set default today on load
+            $('#new_date').val(getTodayDate());
+            // ✅ Select2 Init
+            $('#advanceSimpleModal select').select2({
+                dropdownParent: $('#advanceSimpleModal'),
+                width: '100%'
+            });
+            // ================= LOAD CLASSES =================
+            $('#student_id').on('change', function () {
+                let student_id = $(this).val();
+                $('#class_id').html('<option value="">Loading...</option>').trigger('change');
+                // reset date
+                $('#new_date').val(getTodayDate()).attr('max', '');
+                if (!student_id) return;
+                $.ajax({
+                    url: 'get_adv_classes.php',
+                    type: 'POST',
+                    data: { student_id: student_id },
+                    success: function (response) {
+                        $('#class_id').html(response).trigger('change');
+                    },
+                    error: function () {
+                        $('#class_id').html('<option value="">Error loading classes</option>');
+                    }
+                });
+            });
+            // ================= SET MAX DATE =================
+            $('#class_id').on('change', function () {
+                let selected = $(this).find(':selected');
+                let classDate = selected.data('date'); // YYYY-MM-DD
+                if (!classDate) {
+                    $('#new_date').attr('max', '');
+                    $('#new_date').val(getTodayDate());
+                    return;
+                }
+                let dateObj = new Date(classDate);
+                // subtract 1 day
+                dateObj.setDate(dateObj.getDate() - 1);
+                let year = dateObj.getFullYear();
+                let month = String(dateObj.getMonth() + 1).padStart(2, '0');
+                let day = String(dateObj.getDate()).padStart(2, '0');
+                let newMaxDate = `${year}-${month}-${day}`;
+                // apply max
+                $('#new_date').attr('max', newMaxDate);
+                // ✅ choose smaller of (today OR maxDate)
+                let today = getTodayDate();
+                if (today > newMaxDate) {
+                    $('#new_date').val(newMaxDate);
+                } else {
+                    $('#new_date').val(today);
+                }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll('.toast').forEach(el => {
+                let toast = new bootstrap.Toast(el, { delay: 3000 });
+                toast.show();
+            });
+        });
+    </script>
+    <script>
+        let studentNoteModal = new bootstrap.Modal(document.getElementById('studentNoteModal'));
+        // OPEN MODAL
+        document.querySelectorAll(".openStudentNoteModal").forEach(btn => {
+            btn.addEventListener("click", function () {
+                document.getElementById("note_sid").value = this.dataset.sid;
+                document.getElementById("note_tid").value = this.dataset.tid;
+                document.getElementById("note_type").value = this.dataset.type;
+                studentNoteModal.show();
+            });
+        });
+        // SAVE NOTE
+        document.getElementById("saveStudentNote").addEventListener("click", function () {
+            let sid = document.getElementById("note_sid").value;
+            let tid = document.getElementById("note_tid").value;
+            let message = document.getElementById("note_message").value.trim();
+            let type = document.getElementById("note_type").value;
+            if (!message) {
+                toastr.warning("Please enter note");
+                return;
+            }
+            let params = new URLSearchParams();
+            params.append("sid", sid);
+            params.append("tid", tid);
+            params.append("message", message);
+            params.append("type", type);
+            fetch("save_student_note.php", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: params.toString()
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.status === "success") {
+                        toastr.success("Note added");
+                        studentNoteModal.hide();
+                        document.getElementById("note_message").value = "";
+                    } else {
+                        toastr.error(data.message || "Error saving note");
+                    }
+                })
+                .catch(() => toastr.error("Server error"));
+        });
+    </script>
+    <script>
+        document.querySelectorAll(".openStudentNotesModal").forEach(btn => {
+            btn.addEventListener("click", function () {
+                let sid = this.dataset.sid;
+                let modal = new bootstrap.Modal(document.getElementById('studentNotesModal'));
+                fetch("get_student_notes.php?sid=" + sid)
+                    .then(res => res.text())
+                    .then(data => {
+                        document.getElementById("studentNotesContent").innerHTML = data;
+                        modal.show();
+                    })
+                    .catch(() => toastr.error("Failed to load notes"));
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('keydown', function (e) {
+            // Ignore typing inside inputs
+            if (
+                document.activeElement.tagName === 'INPUT' ||
+                document.activeElement.tagName === 'TEXTAREA'
+            ) {
+                return;
+            }
+            // NEXT
+            if (
+                e.key.toLowerCase() === 'n' ||
+                e.key === 'ArrowRight'
+            ) {
+                const nextBtn = document.getElementById('nextPageBtn');
+                if (nextBtn) {
+                    window.location.href = nextBtn.href;
+                }
+            }
+            // PREVIOUS
+            if (
+                e.key.toLowerCase() === 'p' ||
+                e.key === 'ArrowLeft'
+            ) {
+                const prevBtn = document.getElementById('prevPageBtn');
+                if (prevBtn) {
+                    window.location.href = prevBtn.href;
+                }
+            }
+        });
+    </script>
+    <!-- Daily Classes Modal -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const modalButtons =
+                document.querySelectorAll(".view-modal");
+            modalButtons.forEach(button => {
+                button.addEventListener("click", function () {
+                    let hid =
+                        this.dataset.hid;
+                    let teacher =
+                        this.dataset.teacher;
+                    let currentTime =
+                        this.dataset.time;
+                    let date =
+                        document.getElementById("shiftDate").value;
+                    // Set hidden history id
+                    document.getElementById("shiftHid").value =
+                        hid;
+                    // Set teacher
+                    $('#shiftTeacher')
+                        .val(teacher)
+                        .trigger('change');
+                    // Load available times
+                    loadAvailableTimes(
+                        teacher,
+                        date,
+                        hid,
+                        currentTime
+                    );
+                });
+            });
+            // Teacher change event
+            $('#shiftTeacher').on('change', function () {
+                let teacher =
+                    $(this).val();
+                let hid =
+                    $('#shiftHid').val();
+                let currentTime =
+                    $('#shiftTime').data('selected');
+                let date =
+                    $('#shiftDate').val();
+                loadAvailableTimes(
+                    teacher,
+                    date,
+                    hid,
+                    currentTime
+                );
+            });
+        });
+        /* =====================================================
+        LOAD AVAILABLE TIMES
+        ===================================================== */
+        function loadAvailableTimes(
+            teacherId,
+            classDate,
+            hid,
+            selectedTime = ''
+        ) {
+            if (!teacherId) {
+                $('#shiftTime').html(
+                    '<option value="">Select Teacher First</option>'
+                );
+                return;
+            }
+            $.ajax({
+                url: 'get-available-times.php',
+                type: 'GET',
+                data: {
+                    tid: teacherId,
+                    date: classDate,
+                    hid: hid
+                },
+                success: function (response) {
+                    $('#shiftTime').html(response);
+                    if (selectedTime !== '') {
+                        $('#shiftTime')
+                            .val(selectedTime)
+                            .trigger('change');
+                    }
+                }
+            });
+        }
+    </script>
+    <!-- =====================================================
+SCRIPTS
+===================================================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const masterCheckbox =
+                document.getElementById('group-checkable');
+            const checkboxes =
+                document.querySelectorAll('.checkboxes');
+            masterCheckbox.addEventListener('change', function () {
+                checkboxes.forEach(checkbox => {
+                    checkbox.checked = this.checked;
+                });
+            });
+        });
+        /* =====================================================
+        BULK ACTION
+        ===================================================== */
+        function setMonitorAndSubmit(monitorValue) {
+            document.getElementById('monitorInput').value =
+                monitorValue;
+            document.getElementById('bulkActionForm').submit();
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const buttons = document.querySelectorAll(".view-modal");
+            buttons.forEach(button => {
+                button.addEventListener("click", function () {
+                    let hid = this.dataset.hid;
+                    let time = this.dataset.time;
+                    let teacher = this.dataset.teacher;
+                    // Set hidden input
+                    document.getElementById("shiftHid").value = hid;
+                    // Set teacher
+                    $('#shiftTeacher')
+                        .val(teacher)
+                        .trigger('change');
+                    // Set time
+                    $('#shiftTime')
+                        .val(time)
+                        .trigger('change');
+                });
+            });
+        });
+    </script>
+</div>
+</div>
+<script type="module">
+    import PhotoSwipeLightbox from 'https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe-lightbox.esm.js';
+
+    const lessonViewer = document.getElementById('lessonPhotoSwipe');
+
+    if (lessonViewer) {
+        const lightbox = new PhotoSwipeLightbox({
+            gallery: '#lessonPhotoSwipe',
+            children: 'a',
+            pswpModule: () => import('https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.esm.js'),
+
+            wheelToZoom: true,
+            showHideAnimationType: 'zoom',
+
+            initialZoomLevel: 'fit',
+            secondaryZoomLevel: 1.8,
+            maxZoomLevel: 4,
+
+            padding: {
+                top: 30,
+                bottom: 30,
+                left: 20,
+                right: 20
+            }
+        });
+
+        lightbox.init();
+    }
+</script>
+<script>
+    function confirmComplete() {
+        return confirm("Are you sure to complete this chapter and move to next?");
+    }
+</script>
+<script>
+    $('#addRequestModal').on('show.bs.modal', function (event) {
+        var button = event.relatedTarget;
+        if (!button) return; // safety
+        var oldValue = button.getAttribute('data-old');
+        $('#teacher_id').val(button.getAttribute('data-teacher_id'));
+        $('#type').val(button.getAttribute('data-type'));
+        $('#student_id').val(button.getAttribute('data-student_id'));
+        $('#old').val(oldValue);
+        setTimeout(function () {
+            $('#new').val(oldValue).trigger('change');
+        }, 100);
+    });
+</script>
+<script>
+    function confirmTempComplete() {
+        if (!confirm("Are you sure you want to complete this requested course? This will return the student to their original course.")) {
+            return;
+        }
+        // redirect with required params
+        window.location.href = "complete_temp.php?" + new URLSearchParams({
+            hid: 19839579,
+            sid: 8832,
+            tid: 199,
+            adept_id: 125,
+            alesson_id: 365,
+            apage: 13,
+            acount: 0
+        });
+    }
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447"
+    integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ=="
+    data-cf-beacon='{"version":"2024.11.0","token":"43f88b953cb44198aff5ff3b0a9ded2c","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+    crossorigin="anonymous"></script>
