@@ -128,6 +128,19 @@
         if (!pageM) return;
 
         var pageNum = pageM[1];
+
+        function toQuizUrl(name, book, page) {
+            var n = name.trim().toLowerCase().replace(/\b\w/g, function (c) { return c.toUpperCase(); }).replace(/\s+/g, '%20');
+            return 'https://lqaquiz.vercel.app/#/' + n + '/quiz/' + toKebab(book) + '/' + page;
+        }
+
+        pageEl.style.cursor = 'pointer';
+        pageEl.title = 'Open quiz in new tab';
+        pageEl.addEventListener('click', function (e) {
+            e.stopPropagation();
+            window.open(toQuizUrl(studentName, bookName, pageNum), '_blank');
+        });
+
         var url = BASE + '/' + toKebab(courseName) + '/' + toKebab(bookName) + '/page-' + pageNum + '.md';
         var cached = null;
 
